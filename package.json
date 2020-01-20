@@ -1,5 +1,6 @@
 {
   "name": "innovovoice",
+  "Author": "Rey Fuertes",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
