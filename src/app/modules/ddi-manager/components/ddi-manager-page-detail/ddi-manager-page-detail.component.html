@@ -1,0 +1,19 @@
+<iv-top-nav-actions [crumbs]="GetCrumbs()" [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="column" class="mngr-e-p__container">
+  <div>
+    <div fxFlex="50" fxLayoutAlign="start center">01202 987654</div>
+    <div fxFlex="50" fxLayoutAlign="end center">
+      <iv-button type="transparent" text="cancel"></iv-button>
+      <iv-button text="save" type="primary"></iv-button>
+    </div>
+  </div>
+  <div>
+    <form fxLayout="column" novalidate [formGroup]="form" fxLayoutGap="20px">
+      <iv-ddi-manager-general [form]="form"></iv-ddi-manager-general>
+      <iv-ddi-manager-routing [form]="form"></iv-ddi-manager-routing>
+      <iv-ddi-manager-advance [form]="form"></iv-ddi-manager-advance>
+      <iv-ddi-manager-working-hours></iv-ddi-manager-working-hours>
+      <iv-footer-actions></iv-footer-actions>
+    </form>
+  </div>
+</div>

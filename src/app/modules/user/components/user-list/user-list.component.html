@@ -1,0 +1,19 @@
+<div fxLayout="row" class="iv-list-item user-list" fxLayoutAlign="start center" [ngClass]="type" fxLayoutGap="20px">
+  <div fxFlex="10" >{{item?.description}}</div>
+  <div  fxLayout="row" fxLayoutAlign="start center">
+    <span>{{item?.full_name}}</span>
+  </div>
+  <div fxFlex="12" fxLayout="row" fxLayoutAlign="start center">
+    <iv-pill [type]="pillType" text="john@mycompany.co.uk"></iv-pill>
+  </div>
+  <div fxFlex="8" fxLayout="row" fxLayoutAlign="start center">
+    <span>{{ userRoles[item?.user_roles] }}</span>
+  </div>
+  <div fxFlex="5" fxLayout="row" fxLayoutAlign="start center">
+    <span>logged in</span>
+  </div>
+  <div fxFlex fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+    <span fxFlex="50" fxLayoutAlign="end center" class="icon icon-pencil"></span>
+    <img class="more-options" [src]="assetSvgPath + 'more-options-primary.svg'" />
+  </div>
+</div>

@@ -1,0 +1,7 @@
+@import "src/styles/global";
+
+::ng-deep {
+  div:nth-child(2) {
+    height: calc(100% - 45px);
+  }
+}

@@ -1,0 +1,21 @@
+@import "src/styles/global";
+.step-sum_container {
+  .left {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $color-gray-1;
+  }
+  .right {
+    font-size: 16px;
+    color: $color-black-1;
+    font-weight: 500;
+  }
+}
+::ng-deep {
+  iv-link {
+    max-width: 21%;
+  }
+  .step-sum_container .mat-list-item-content {
+    padding: 0 !important;
+  }
+}

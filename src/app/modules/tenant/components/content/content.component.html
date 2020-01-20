@@ -1,0 +1,36 @@
+<div class="iv-content" fxLayout="column">
+  <div>
+    <span fxLayoutAlign="start center" fxFlex="50" class="text">Add Reseller</span>
+    <div fxLayoutAlign="end center" fxFlex="50">
+      <span class="icon-cross-circle" (click)="redirectTo()"></span>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <ng-container *ngFor="let step of steps; let last = last">
+      <div fxFlex *ngIf="last" class="line"></div>
+      <div fxFlex="20" fxLayoutAlign="center center">
+        <div class="circle" [ngClass]="{'active': step?.index == activeIndex, 'visited': isVisited(step?.index)}">
+          {{step?.index}} </div>
+      </div>
+    </ng-container>
+  </div>
+  <mat-tab-group [selectedIndex]="activeIndex" [ngClass]="getBarWidth(activeIndex)"
+                 [ngStyle]="{'left': getBarWidth(activeIndex)}">
+    <mat-tab *ngFor="let step of steps" fxFlex="50" disabled="true" [label]="step?.text">
+      <ng-container [ngSwitch]="activeIndex">
+        <iv-step-detail (formValueEmitter)="onFormChange($event)" *ngSwitchCase="'1'"></iv-step-detail>
+        <iv-step-summary *ngSwitchCase="'2'"></iv-step-summary>
+      </ng-container>
+    </mat-tab>
+  </mat-tab-group>
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <div fxFlex="80" [fxLayoutAlign]="!showBtn(activeIndex) ? 'end center' : 'start start'">
+      <iv-button type="cancel" text="cancel" (redirect)="redirectTo()" ></iv-button>
+    </div>
+    <div [fxFlex]="!showBtn(activeIndex) ? 20 : 40" fxLayoutAlign="start center">
+      <iv-button *ngIf="showBtn(activeIndex)" type="transparent" (click)="onPrev()" text="previous"></iv-button>
+      <iv-button *ngIf="!showBtn(activeIndex)" text="next" [disabled]="!item" (click)="item ? onNext(): null" type="primary"></iv-button>
+      <iv-button *ngIf="showBtn(activeIndex)" text="save" (click)="onSave()" type="primary"></iv-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<iv-top-nav-actions [crumbs]="GetCrumbs()" [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="iv-vm__container" fxLayout="column" fxLayoutAlign="start start">
+  <mat-card fxLayout="column" fxFlexFill fxLayoutGap="20px">
+    <div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="start start">
+        <iv-search (keywordEmitter)="onSearch($event)" type="large"></iv-search>
+      </div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="end end">
+        <iv-button-toggle (toggleChange)="onToggle($event)"></iv-button-toggle>
+      </div>
+    </div>
+    <div class="content" [ngSwitch]="tableView">
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <h5>Default</h5>
+        <span class="iv-badge">4</span>
+      </div>
+      <ng-container *ngSwitchCase="'card'">
+        <div class="iv-list" fxLayout="row wrap" fxLayoutGap="30px">
+          <iv-voice-mail-card *ngFor="let item of (items$ | async)" [item]="item">
+          </iv-voice-mail-card>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'list'">
+        <div class="iv-list" fxLayout="column" fxLayoutGap="5px">
+          <iv-voice-mail-list *ngFor="let item of (items$ | async)" [item]="item"></iv-voice-mail-list>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <h5>Disabled</h5>
+          <span class="iv-badge">2</span>
+        </div>
+        <div class="iv-list" fxLayout="column" fxLayoutGap="5px">
+          <iv-voice-mail-list *ngFor="let item of (items$ | async)" [item]="item" [isDisabled]="true">
+          </iv-voice-mail-list>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+</div>

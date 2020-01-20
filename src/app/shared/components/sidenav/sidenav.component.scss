@@ -1,0 +1,140 @@
+@import "src/styles/global";
+:host {
+  position: fixed;
+  z-index: 999;
+}
+.sub-nav {
+  width: 240px;
+  background-color: $color-primary;
+  transition: 0.2s ease-in;
+  .mat-list-item {
+    text-transform: uppercase;
+    color: $color-white;
+    cursor: pointer;
+  }
+}
+.hidden {
+  display: none !important;
+}
+.show {
+  display: flex;
+}
+.sidenav-container {
+  width: 215px;
+  height: 100vh;
+  box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in;
+  background-color: $color-white;
+  .logo-text {
+    padding: 16px 16px 0 16px;
+  }
+  iv-search {
+    padding: 0 16px;
+    height: 55px;
+  }
+  iv-bottom-menu {
+    width: 215px !important;
+  }
+  &.active {
+    margin-left: -150px;
+    iv-search {
+      padding: 0;
+    }
+    iv-bottom-menu {
+      width: 70px !important;
+    }
+    > div {
+      width: 70px !important;
+    }
+    mat-list {
+      width: 70px !important;
+    }
+  }
+  img {
+    width: 35px;
+    height: 35px;
+  }
+  .toggle {
+    height: 50px;
+    > div {
+      border-radius: 50%;
+      border: thin $color-primary solid;
+      width: 30px;
+      height: 30px;
+      padding: 4px 6px;
+      position: relative;
+      left: 14px;
+      background-color: $color-white;
+      cursor: pointer;
+      color: $color-primary;
+    }
+  }
+  .profile-img {
+    height: 30px;
+    width: 30px;
+  }
+  .profile-name {
+    margin: 0 5px;
+  }
+  .iv-text {
+    text-transform: uppercase;
+    color: $color-black;
+    span.primary {
+      color: $color-primary;
+    }
+  }
+}
+iv-bottom-menu {
+  margin-bottom: 20px;
+}
+::ng-deep {
+  button.mat-menu-item {
+    outline: none !important;
+    text-transform: uppercase;
+  }
+  .menu-panel {
+    margin-left: 225px;
+    width: 150px;
+    outline: none;
+    margin-top: -45px;
+  }
+}
+:host ::ng-deep {
+  .mat-list-base .mat-list-item .mat-list-item-content,
+  .mat-list-base .mat-list-option .mat-list-item-content {
+    padding: 0 30px;
+  }
+  mat-list {
+    width: 100%;
+    .mat-list-item-content {
+      :hover {
+        color: $color-primary;
+        cursor: pointer;
+      }
+    }
+  }
+  .mat-list-item {
+    font-size: 12px;
+    a {
+      color: $color-black-1;
+    }
+  }
+  .active .mat-list-item {
+    &.active {
+      border-right: 2px $color-primary solid;
+      .menu-panel {
+        margin-left: 78px;
+        width: 150px;
+        margin-top: -98px;
+      }
+    }
+  }
+  @media (max-width: 414px) {
+    .sidenav-container {
+      &.active {
+        margin-left: -220px;
+        display: none;
+      }
+    }
+  }
+}

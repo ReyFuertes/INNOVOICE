@@ -1,0 +1,19 @@
+@import "src/styles/global";
+.iv-moh__container {
+  @include iv-content-container;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $color-gray;
+  margin: 0;
+  font-weight: 500;
+}
+.content > div {
+  margin-bottom: 10px;
+  > div {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,10 @@
+<mat-expansion-panel #profilePnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title><span>Profile</span></mat-panel-title>
+    <span *ngIf="!profilePnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="profilePnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-dropdown-select-pill label="key profile" fxFlex="30"></iv-dropdown-select-pill>
+  </div>
+</mat-expansion-panel>

@@ -1,0 +1,30 @@
+@import "src/styles/global";
+:host {
+  width: 100%;
+}
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.voice-mail {
+  color: $color-black-1;
+  div {
+    &:nth-child(1) {
+      color: $color-secondary;
+    }
+    &:nth-child(3) {
+      font-size: 14px;
+      font-weight: 500;
+      color: $color-gray;
+    }
+    &:nth-child(4) {
+      .icon-play-circle {
+        color: $color-info;
+        font-size: 24px;
+      }
+      .icon-pencil {
+        color: $color-primary;
+      }
+    }
+  }
+}

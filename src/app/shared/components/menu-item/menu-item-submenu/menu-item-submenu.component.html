@@ -1,0 +1,17 @@
+<mat-list-item (click)="toggleActive()" [fxLayoutAlign]="toggle ? 'center center' : 'start center'"
+               #menuTrigger="matMenuTrigger" role="listitem" [matMenuTriggerFor]="subMenu">
+  <span class="{{ menu.icon }} icon"></span>
+  <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/" href="javascript:void(0)"
+     *ngIf="!toggle" class="iv-uc">{{ menu.label }}</a>
+  <span *ngIf="!toggle" class="icon-chevron-right"></span>
+  <ng-container>
+    <mat-menu class="menu-panel" #subMenu xPosition="after">
+      <div (mouseleave)="menuTrigger.closeMenu()">
+        <!-- <button mat-menu-item *ngFor="let sub of menu.subMenu">{{ sub }}</button> -->
+        <div fxLayout="row" fxFlexFill>
+          This is a sub menu
+        </div>
+      </div>
+    </mat-menu>
+  </ng-container>
+</mat-list-item>

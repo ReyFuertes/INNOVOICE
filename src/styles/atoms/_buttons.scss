@@ -1,0 +1,80 @@
+@import "./colours";
+.iv-button {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  width: fit-content;
+  min-width: 120px;
+  height: 30px;
+  line-height: 0;
+  padding: 0;
+  background-color: $color-white;
+  color: $color-gray-1;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 5px;
+  opacity: 1;
+  &.small {
+    min-width: 90px;
+    height: 25px;
+  }
+  &.primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  &.transparent {
+    border: thin $color-primary solid;
+    background-color: $color-white;
+    color: $color-primary;
+  }
+  &.iv-btn-grey {
+    background-color: $grey-60;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($grey-60, 5%);
+    }
+  }
+  &.iv-btn-outline {
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+  &.iv-btn-outline-grey {
+    background-color: transparent;
+    border: 1px solid $grey-40;
+    color: $grey-40;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $grey-40;
+      color: $color-white;
+    }
+  }
+}
+button {
+  &.btn-num {
+    width: 35px;
+    height: 35px;
+    color: $color-primary;
+    background-color: $color-white;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06);
+    border: thin $color-gray-3 solid;
+    font-weight: 600;
+    cursor: pointer;
+    &.active {
+      background-color: $color-primary !important;
+      color: $color-white !important;
+      border: thin $color-primary solid;
+    }
+  }
+}

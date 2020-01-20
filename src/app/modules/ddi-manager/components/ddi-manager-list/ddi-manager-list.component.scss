@@ -1,0 +1,40 @@
+@import "src/styles/global";
+:host {
+  width: 100%;
+}
+.ivr-menu__list {
+  color: $color-black-1;
+  &:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  div {
+    &:nth-child(1) {
+      color: $color-secondary;
+      font-weight: 500;
+    }
+    &:nth-child(2) {
+      color: $color-gray-2;
+      font-size: 12px;
+    }
+    &:nth-child(3) {
+      font-weight: 500;
+      color: $color-primary;
+    }
+    &:nth-child(4) .icon {
+      font-size: 16px;
+      color: $color-primary;
+    }
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $color-white;
+}
+.icon-list,
+.icon-chart-growth {
+  font-size: 24px;
+}

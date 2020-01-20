@@ -1,0 +1,17 @@
+<div fxLayout="row" class="iv-list-item provisioning" fxLayoutAlign="start center" [ngClass]="type" fxLayoutGap="20px"
+     [ngClass]="{type: type, 'disabled': !item?.enabled}">
+  <div>{{ item?.device_label }}</div>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <span>{{ item?.mac_address }}</span>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <span>{{ getTimeThreshold(item) }}</span>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <iv-pill icon="icon-smartphone" [type]="pillType" [text]="getPillText(item)"></iv-pill>
+  </div>
+  <div fxFlex fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+    <span fxFlex="50" fxLayoutAlign="end center" class="icon icon-pencil" (click)="onEdit(item?.id)"></span>
+    <img class="more-options" [src]="assetSvgPath + 'more-options-primary.svg'" />
+  </div>
+</div>

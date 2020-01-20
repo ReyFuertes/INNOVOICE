@@ -1,0 +1,24 @@
+@mixin breadcrumbs {
+  > div {
+    color: $color-gray-2;
+    &:first-child {
+      cursor: pointer;
+    }
+  }
+  ol {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    li {
+      list-style-type: none;
+      font-weight: 550;
+      color: $color-gray-1;
+      font-size: 16px;
+      span.icon-chevron-right {
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0 10px;
+      }
+    }
+  }
+}

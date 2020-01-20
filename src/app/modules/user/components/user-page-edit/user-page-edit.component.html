@@ -1,0 +1,18 @@
+<iv-top-nav-actions [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="column" class="user-e-p__container">
+  <div>
+    <div fxFlex="50" fxLayoutAlign="start center">My Company</div>
+    <div fxFlex="50" fxLayoutAlign="end center">
+      <iv-button type="transparent" text="cancel"></iv-button>
+      <iv-button text="save" (click)="onSubmit()" type="primary"></iv-button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <form fxLayout="column" novalidate [formGroup]="form" fxLayoutGap="20px">
+      <div fxFlexFill>
+        <iv-user-general [form]="form"></iv-user-general>
+      </div>
+      <iv-footer-actions></iv-footer-actions>
+    </form>
+  </div>
+</div>

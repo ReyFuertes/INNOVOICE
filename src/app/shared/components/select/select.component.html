@@ -1,0 +1,10 @@
+<div fxLayout="column" fxLayoutAlign="start start">
+  <label>{{ label }}</label>
+  <mat-form-field floatLabel="never" [ngStyle]="{'min-width': minWidth}" [ngClass]="{'small-select': isSmall}">
+    <mat-select [placeholder]="placeholder">
+      <mat-option *ngFor="let item of items" [value]="item.value">
+        {{item.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

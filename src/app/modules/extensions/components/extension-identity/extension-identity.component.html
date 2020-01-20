@@ -1,0 +1,20 @@
+<mat-expansion-panel #identityPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title> <span>Advanced</span> </mat-panel-title>
+    <span *ngIf="!identityPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="identityPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="30" [form]="form" [controlName]="'displayName'" placeholder="Type your display name here"
+              label="display name">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'callerid'" placeholder="Type your called id here"
+              label="display name">
+    </iv-input>
+    <iv-checkbox fxFlex="30" text="Inherit from main number"></iv-checkbox>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'directoryName'" placeholder="Type your called id here"
+              label="display name">
+    </iv-input>
+    <iv-checkbox fxFlex="30" text="Directory visible"></iv-checkbox>
+  </div>
+</mat-expansion-panel>

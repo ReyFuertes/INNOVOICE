@@ -1,0 +1,57 @@
+.iv-search {
+  display: flex;
+  .mat-form-field-label {
+    position: relative;
+    top: 15px;
+    margin: 0;
+    left: 10px;
+    font-size: 14px;
+  }
+  .icon-magnifier {
+    position: absolute;
+    color: $color-primary;
+    font-size: 18px;
+    left: 12px;
+    top: 18px;
+  }
+  input {
+    padding-left: 35px;
+    color: $color-black-1;
+    width: 100%;
+    height: 40px;
+    padding-top: 2px;
+    border: thin $color-gray-2 solid;
+    font-size: 14px;
+    padding-right: 25px;
+  }
+  .mat-form-field-label {
+    position: relative;
+    top: 18px;
+    margin: 0;
+    left: 35px;
+    font-size: 14px;
+  }
+  &.small {
+    width: 190px;
+    .icon-cross {
+      position: absolute;
+      right: 13px;
+      top: 20px;
+    }
+    input {
+      border-radius: 20px;
+    }
+  }
+  &.large {
+    .mat-form-field-wrapper {
+      width: 500px;
+    }
+    input {
+      border-radius: 2px;
+    }
+  }
+  .mat-form-field-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+}

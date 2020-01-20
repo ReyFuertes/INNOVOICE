@@ -1,0 +1,15 @@
+<mat-expansion-panel #callForwardingPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header (click)="expandPanel(callForwardingPnl)">
+    <mat-panel-title><span>Settings</span></mat-panel-title>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <iv-toggle toggle="true" (click)="isEventDialog = true"></iv-toggle>
+      <span *ngIf="!callForwardingPnl.expanded" class="icon-chevron-down-circle"></span>
+      <span *ngIf="callForwardingPnl.expanded" class="icon-chevron-up-circle"></span>
+    </div>
+  </mat-expansion-panel-header>
+  <div class="content" fxLayout="column" fxLayoutGap="20px">
+    <div>
+      <iv-select fxFlex="50" label="destination" placeholder="select your option"></iv-select>
+    </div>
+  </div>
+</mat-expansion-panel>

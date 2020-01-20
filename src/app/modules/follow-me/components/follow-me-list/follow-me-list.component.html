@@ -1,0 +1,27 @@
+<div fxLayout="row" class="iv-list-item follow-me-list" fxLayoutAlign="start center" [ngClass]="type">
+  <div fxFlex="10">{{title}}</div>
+  <div fxFlex="5" fxLayout="row" fxLayoutAlign="start center">
+    <span>201</span>
+  </div>
+  <div fxFlex="10" class="checkabled">
+    <span class="icon-checkmark-circle"></span>
+    <span>DND Enabled</span>
+  </div>
+  <div *ngIf="status" fxFlex="7" fxLayout="row" class="status" fxLayoutAlign="start center">
+    <ng-container [ngSwitch]="status">
+      <div class="info" *ngSwitchCase="'busy'"><span class="icon-arrow-divert"></span>
+        <span>Busy</span>
+      </div>
+      <div class="busy" *ngSwitchCase="'divert'"> <span class="icon-arrow-divert"></span>
+        <span> Always </span>
+      </div>
+    </ng-container>
+  </div>
+  <div fxFlexfxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+      <iv-pill *ngFor="let pill of pillArr" [text]="pill?.text"></iv-pill>
+  </div>
+  <div fxFlex fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+    <span fxFlex="50" fxLayoutAlign="end center" class="icon icon-pencil"></span>
+    <img class="more-options" [src]="assetSvgPath + 'more-options-primary.svg'" />
+  </div>
+</div>

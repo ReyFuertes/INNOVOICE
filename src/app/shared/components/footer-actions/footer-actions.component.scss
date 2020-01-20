@@ -1,0 +1,15 @@
+@import "src/styles/global";
+.footer-actions {
+  padding: 20px;
+  background-color: $color-white;
+  border-radius: 2px 2px 0 0;
+  border-top: thin $color-gray-3 solid;
+  margin-left: -35px;
+  margin-right: -25px;
+  position: fixed;
+  top: calc(100% - 70px);
+  width: calc(100% - 221px);
+  &.toggle {
+    width: calc(100% - 77px);
+  }
+}

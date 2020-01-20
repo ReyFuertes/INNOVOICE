@@ -1,0 +1,7 @@
+<div class="iv-avatar" fxLayout="row" fxLayoutAlign="center center">
+  <img [ngClass]="size" *ngIf="img; else default" [src]="assetImgPath + img" />
+</div>
+
+<ng-template #default>
+  <div class="iv-avatar default large"></div>
+</ng-template>

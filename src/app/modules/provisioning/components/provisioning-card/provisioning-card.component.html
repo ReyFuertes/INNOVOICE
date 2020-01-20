@@ -1,0 +1,22 @@
+<mat-card class="iv-card small" [ngClass]="{type: type, 'disabled': !item?.enabled}">
+  <div class="body" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <div fxLayout="row" fxLayoutAlign="start start">
+      <div fxFlex class="title">
+        <iv-pill icon="icon-smartphone" [isBold]="false" [type]="pillType" [text]="getPillText(item)"></iv-pill>
+      </div>
+      <div fxFlex="10" fxLayoutAlign="end center">
+        <img [src]="assetSvgPath + 'more-options-primary.svg'" />
+      </div>
+    </div>
+    <div>{{ item?.device_label }}</div>
+  </div>
+  <div class="footer" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <div>
+      <span>{{ item?.mac_address }}</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div fxFlex>{{ getTimeThreshold(item) }}</div>
+      <div fxFlex="10" fxLayoutAlign="end center" class="icon icon-pencil" (click)="onEdit(item?.id)"></div>
+    </div>
+  </div>
+</mat-card>

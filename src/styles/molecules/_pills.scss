@@ -1,0 +1,59 @@
+.iv-pill {
+  width: fit-content;
+  height: 23px;
+  border-radius: 12px;
+  align-content: center;
+  align-items: center;
+  mat-chip {
+    background-color: transparent !important;
+  }
+  &.default {
+    background-color: transparent;
+    color: $color-secondary;
+    border: thin $color-secondary solid;
+    span.icon {
+      color: $color-secondary;
+    }
+    span.name {
+      color: $color-secondary;
+    }
+  }
+  &.primary {
+    background-color: $color-primary;
+    color: $color-white;
+    border: thin $color-primary solid;
+    span.icon {
+      color: $color-white;
+    }
+  }
+  &.pill-green {
+    background-color: $color-white;
+    color: $color-green;
+    border: thin $color-green solid;
+    span.icon {
+      color: $color-green;
+    }
+  }
+  &.pill-cyan {
+    background-color: $color-white;
+    color: $color-cyan;
+    border: thin $color-cyan solid;
+    span.icon {
+      color: $color-cyan;
+    }
+  }
+  &.pill-violet {
+    background-color: $color-white;
+    color: $color-purple;
+    border: thin $color-purple solid;
+    span.icon {
+      color: $color-purple;
+    }
+  }
+  &.disabled {
+    background-color: $color-white;
+    color: $color-gray;
+    border: thin $color-gray solid;
+    opacity: 0.5;
+  }
+}

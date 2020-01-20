@@ -1,0 +1,18 @@
+<mat-expansion-panel #preferencesPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title> <span>Preferences</span> </mat-panel-title>
+    <span *ngIf="!preferencesPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="preferencesPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-select fxFlex="30" label="call recording" placeholder="select your option"></iv-select>
+    <iv-select fxFlex="30" label="hold music" placeholder="select your option"></iv-select>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'callTimeout'" placeholder="Type your number here"
+              label="call timeout">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'maxConcurrentCalls'" placeholder="Type your number here"
+              label="max concurrent calls">
+    </iv-input>
+    <iv-select fxFlex="30" label="missed call action" placeholder="select your option"></iv-select>
+  </div>
+</mat-expansion-panel>

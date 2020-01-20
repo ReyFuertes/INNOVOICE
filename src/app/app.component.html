@@ -1,0 +1,49 @@
+<!-- todo: need to create a directive for mobile and not mobile -->
+<div fxLayout="row" *ngIf="isMobile" [fxLayoutAlign]="isMobile ? 'start start' : 'start center'" class="iv-wrapper">
+  <div class="sidenav-container" [ngClass]="{'collapse': toggleSideNav}" [fxFlex]="!toggleSideNav ? '220px': '75px'">
+    <iv-sidenav (sidenavChange)="toggle($event)" [menus]="menus"></iv-sidenav>
+  </div>
+  <div fxFlex class="router-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<iv-right-nav (toggleEmitter)="toggleRightNav = $event" [ngClass]="{'toggle': toggleRightNav}"></iv-right-nav>
+
+<!-- todo: need to create a directive for mobile and not mobile -->
+<!-- <mat-drawer-container *ngIf="!isMobile" [class.drawer-opened]="drawer.opened" class="drawer-container">
+    <mat-drawer #drawer class="drawer" mode="side" opened="false">
+      <div fxLayout="column" fxLayoutAlign="start start">
+        <div class="close" fxLayout="row" fxLayoutAlign="end center">
+          <span class="icon-cross-circle" (click)="drawer.close()"></span>
+        </div>
+        <div class="iv-left-nav" fxLayout="column" fxLayoutAlign="start center">
+          <mat-list role="list">
+            <mat-list-item *ngFor="let menu of menus" role="listitem">
+              <span class="icon" [ngClass]="menu.icon"></span>
+              <div class="title">{{ menu.label }}</div>
+              <span class="icon-arrow-right"></span>
+            </mat-list-item>
+          </mat-list>
+          <iv-bottom-menu [isMobile]="isMobile"></iv-bottom-menu>
+        </div>
+      </div>
+    </mat-drawer>
+    
+    <mat-toolbar class="header">
+      <div class="iv-topnav" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <div *ngIf="!drawer.opened" (click)="drawer.toggle()" fxFlex="20" fxLayoutAlign="center center">
+          <img [src]="assetImgPath + 'logo.png'">
+        </div>
+        <div class="title" fxFlex fxLayoutAlign="center center">
+          <span>Dashboard</span>
+        </div>
+        <div fxFlex="20" (click)="toggleRightNav = !toggleRightNav" fxLayoutAlign="center center">
+          <span class="icon-menu"></span>
+        </div>
+      </div>
+    </mat-toolbar>
+  
+    <div class="contents">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container> -->

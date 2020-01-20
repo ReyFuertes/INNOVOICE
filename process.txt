@@ -1,0 +1,8 @@
+--Generate Angular application
+ng new crm
+
+--Create shared module
+ng generate module shared
+
+--Create lazy loaded customers module
+ng generate module customers --route customer-list --module app.module

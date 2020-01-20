@@ -1,0 +1,17 @@
+<mat-card class="iv-card small" [ngClass]="type">
+  <div fxLayout="row">
+    <div fxFlex class="title">{{ item?.description }}</div>
+    <div fxFlex="10" fxLayoutAlign="end center">
+      <img [src]="assetSvgPath + 'more-options-primary.svg'" />
+    </div>
+  </div>
+  <div>{{ item?.full_name }}</div>
+  <div class="body" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <iv-pill icon="icon-users2" [text]="item?.username"></iv-pill>
+    <span class="counter">{{ userRoles[item?.user_roles] }}</span>
+  </div>
+  <div class="footer" fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+    <span fxFlex="50">logged in</span>
+    <span fxFlex="50" fxLayoutAlign="end center" class="icon icon-pencil" routerLink="./edit"></span>
+  </div>
+</mat-card>

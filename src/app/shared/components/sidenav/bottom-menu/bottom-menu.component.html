@@ -1,0 +1,13 @@
+<mat-list role="list">
+  <mat-list-item role="listitem" [fxLayoutAlign]="navbarOpen ? 'center center' : 'start center'">
+    <span class="icon-alarm icon"></span>
+    <span class="alarm-count">2</span>
+    <span *ngIf="!navbarOpen" class="iv-uc">Notifications</span>
+  </mat-list-item>
+  <mat-list-item role="listitem" fxLayout="row" [fxLayoutAlign]="navbarOpen ? 'center center' : 'start center'">
+    <iv-avatar [fxFlex]="!navbarOpen ? 20: 100" [img]="'avatar-90x90.png'"></iv-avatar>
+    <div fxFlex="75" *ngIf="!navbarOpen" class="profile-name">Jerome Saunders</div>
+    <span fxFlex="5" *ngIf="isMobile && !navbarOpen" class="icon-chevron-down"></span>
+    <span fxFlex="5" *ngIf="!isMobile" class="icon-arrow-right"></span>
+  </mat-list-item>
+</mat-list>

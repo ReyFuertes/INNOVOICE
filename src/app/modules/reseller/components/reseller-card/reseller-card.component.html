@@ -1,0 +1,15 @@
+<div fxLayout="row wrap" fxLayoutGap="30px" class="reseller__card">
+  <mat-card *ngFor="let item of (items$ | async)" class="iv-card large np" fxLayout="column" [ngClass]="type"
+            (click)="gotoTenant()">
+    <div class="body" fxLayout="row">
+      <img [src]="svgImgSrc + 'dashboard-sample-img.png'">
+    </div>
+    <div class="footer" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <div>{{ item?.company_name }}</div>
+      <div>
+        <span class="uc">Created on</span>
+        <span>{{ item?.created_at }}</span>
+      </div>
+    </div>
+  </mat-card>
+</div>

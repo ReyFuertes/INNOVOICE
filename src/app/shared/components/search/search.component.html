@@ -1,0 +1,26 @@
+<ng-container [ngSwitch]="type">
+  <div *ngSwitchCase="'small'">
+    <mat-form-field class="iv-search" [ngClass]="type" floatLabel="never">
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <input #input type="text" matInput (input)="onSearch($event.target.value)" placeholder="Search..." autocomplete="off">
+        <span class="icon-magnifier"></span>
+        <span *ngIf="input?.value?.length > 0" (click)="clear(input)" class="icon-cross"></span>
+      </div>
+    </mat-form-field>
+  </div>
+
+  <div *ngSwitchCase="'large'">
+    <mat-form-field class="iv-search" [ngClass]="type" floatLabel="never">
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <span class="icon-magnifier"></span>
+        <input #input type="text" (input)="onSearch($event.target.value)" matInput placeholder="Search..." autocomplete="off">
+      </div>
+    </mat-form-field>
+  </div>
+
+  <div *ngSwitchCase="'icon'">
+    <div class="search-icon-only" fxLayout="row" fxLayoutAlign="center center">
+      <span class="icon-magnifier"></span>
+    </div>
+  </div>
+</ng-container>

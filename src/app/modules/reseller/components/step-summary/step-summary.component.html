@@ -1,0 +1,32 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <mat-list>
+    <mat-list-item class="step-sum_container">
+      <div class="left" fxFlex="30" fxLayoutAlign="start center">company name</div>
+      <div class="right" fxFlex fxLayoutAlign="end center">{{reseller?.company_name}}</div>
+    </mat-list-item>
+    <mat-list-item class="step-sum_container">
+      <div class="left" fxFlex="30" fxLayoutAlign="start center">contact name</div>
+      <div class="right" fxFlex fxLayoutAlign="end center">{{reseller?.contact_name}}</div>
+    </mat-list-item>
+    <mat-list-item class="step-sum_container">
+      <div class="left" fxFlex="30" fxLayoutAlign="start center">contact email</div>
+      <div class="right" fxFlex fxLayoutAlign="end center">{{reseller?.contact_email}}</div>
+    </mat-list-item>
+    <mat-list-item class="step-sum_container">
+      <div class="left" fxFlex="30" fxLayoutAlign="start center">company address</div>
+      <div class="right" fxFlex fxLayoutAlign="end center">{{reseller?.address_line_1}}</div>
+    </mat-list-item>
+    <mat-list-item class="step-sum_container">
+      <div class="left" fxFlex="30" fxLayoutAlign="start center">company phone number</div>
+      <div class="right" fxFlex fxLayoutAlign="end center">{{reseller?.address_line_2}}</div>
+    </mat-list-item>
+    <mat-list-item class="step-sum_container">
+      <div class="left" fxFlex="30" fxLayoutAlign="start center">management domain</div>
+      <div class="right" fxFlex fxLayoutAlign="end center">{{reseller?.domain_name}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+  <div>
+    <iv-link (redirect)="redirectTo()" fxFlexOffset="79" fxFlex="21" text="View DNS Settings"></iv-link>
+  </div>
+</div>

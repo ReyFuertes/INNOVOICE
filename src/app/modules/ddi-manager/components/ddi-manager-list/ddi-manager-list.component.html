@@ -1,0 +1,16 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row" class="iv-list-item ivr-menu__list" fxLayoutAlign="start center"
+       [ngClass]="type" fxLayoutGap="20px">
+    <div class="name">{{ item?.number }}</div>
+    <div fxFlex>{{ item?.description }} </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+      <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="15px">
+        <iv-pill *ngFor="let pill of pills" [text]="pill"></iv-pill>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="15px">
+        <span fxLayoutAlign="end center" class="icon icon-pencil"></span>
+        <img class="more-options" [src]="assetSvgPath + 'more-options-primary.svg'" />
+      </div>
+    </div>
+  </div>
+</div>

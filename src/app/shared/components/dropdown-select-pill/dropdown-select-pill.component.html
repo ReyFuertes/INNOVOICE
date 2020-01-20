@@ -1,0 +1,24 @@
+<div class="dsp__container" [ngClass]="{'multi-line': selectedItems.length > 2}" [ngStyle]="{'height': selectedItems.length > 2 ? '80px' : '40px'}" fxLayout="row"
+     fxLayoutAlign="start center" fxLayoutGap="10px">
+  <div fxLayout="column" fxFlex>
+    <label>{{label}}</label>
+    <div fxLayout="row">
+      <mat-chip-list>
+        <span *ngIf="selectedItems.length <= 0">Select items..</span>
+        <mat-chip *ngFor="let selItem of selectedItems">
+          <span>{{ selItem.label }}</span>
+          <span class="icon-cross-circle" (click)="onRemove(selItem, selItem?.label.replace(' ', '_'))"></span>
+        </mat-chip>
+      </mat-chip-list>
+      <span *ngIf="!toggle" class="icon-chevron-up" (click)="toggle = !toggle"></span>
+      <span *ngIf="toggle" class="icon-chevron-down" (click)="toggle = !toggle"></span>
+    </div>
+  </div>
+</div>
+<div class="dsp-sel" [hidden]="!toggle" [ngClass]="{'fade-in': toggle}">
+  <mat-list role="list">
+    <mat-list-item *ngFor="let item of items" role="listitem">
+      <mat-checkbox [ngClass]="item?.label.replace(' ', '_')" (click)="onSelect(item)">{{ item.label }}</mat-checkbox>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,0 +1,47 @@
+@import "src/styles/global";
+.ivr-e-p__container {
+  @include iv-content-container;
+  > div {
+    &:first-child {
+      min-height: 70px;
+      > div:first-child {
+        font-size: 22px;
+        font-weight: 500;
+        color: $color-secondary;
+      }
+    }
+  }
+}
+iv-toggle {
+  margin: 20px 0;
+}
+mat-expansion-panel {
+  margin-bottom: 30px;
+}
+form {
+  width: 100%;
+}
+.icon-cross {
+  font-size: 16px;
+}
+::ng-deep {
+  .ui-dialog .ui-dialog-content {
+    padding: 0 !important;
+    > div {
+      > div {
+        padding: 0 20px 20px;
+        &:first-child {
+          margin-top: 20px;
+          border-bottom: thin $color-gray-2;
+        }
+      }
+    }
+  }
+  mat-panel-title {
+    color: $color-secondary;
+  }
+  .mat-form-field {
+    width: 100%;
+    min-width: 245px;
+  }
+}

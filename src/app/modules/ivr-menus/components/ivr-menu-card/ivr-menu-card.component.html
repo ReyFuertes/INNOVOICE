@@ -1,0 +1,19 @@
+<div fxLayout="row wrap" fxLayoutGap="30px">
+  <mat-card class="iv-card medium" [ngClass]="type" fxLayout="column" fxLayoutGap="10px">
+    <div fxLayout="row">
+      <div [matTooltip]="item?.description" matTooltipPosition="above" fxFlex>{{item?.description}}</div>
+      <div fxFlex="10" fxLayoutAlign="end center">
+        <img [src]="assetSvgPath + 'more-options-primary.svg'" />
+      </div>
+    </div>
+    <div class="body" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <div fxFlex fxFlexFill fxLayout="row wrap" fxLayoutGap="18px">
+        <button *ngFor="let num of nums" class="btn-num" [ngClass]="{active: num?.active}" mat-flat-button
+                color="primary">{{num?.text}}</button>
+      </div>
+      <div fxFlex="20" fxLayout="row" fxLayoutAlign="end end" fxFlexFill>
+        <span class="icon icon-pencil" (click)="onEdit(item?.id)"></span>
+      </div>
+    </div>
+  </mat-card>
+</div>

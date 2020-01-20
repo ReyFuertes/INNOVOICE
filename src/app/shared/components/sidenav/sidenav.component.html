@@ -1,0 +1,40 @@
+<div fxLayout="row">
+  <div class="sidenav-container" [ngClass]="{ 'active': navbarOpen }" fxLayout="column"
+       [fxLayoutAlign]="navbarOpen ? 'end end' : 'start center'" fxLayoutGap="20px">
+    <div fxFlex fxFlexFill>
+      <!-- logo text -->
+      <div class="logo-text" fxLayout="row" [fxLayoutAlign]="navbarOpen ? 'center center' : 'start center'"
+           fxLayoutGap="5px">
+        <img [src]="assetImgPath + 'logo.png'">
+        <div *ngIf="!navbarOpen" class="iv-text">innovo<span class="primary">voice</span></div>
+      </div>
+      <!-- search input -->
+      <div>
+        <iv-search fxLayoutAlign="center center" [type]="navbarOpen ? 'icon': 'small'" [toggle]="navbarOpen">
+        </iv-search>
+      </div>
+      <!-- toggle button -->
+      <div class="toggle" fxLayout="row" fxLayoutAlign="end center">
+        <div (click)="navbarOpen = !navbarOpen; sidenavChange.emit(navbarOpen)"><span
+                class="icon-chevrons-expand-horizontal"></span></div>
+      </div>
+      <!-- upper menu -->
+      <mat-list role="list">
+        <ng-container *ngFor="let menu of menus; let i = index">
+          <iv-menu-item [toggle]="navbarOpen" (click)="menu.subMenu ? getSubmenu(menu.subMenu): noMenu = true"
+                        [menu]="menu"></iv-menu-item>
+        </ng-container>
+      </mat-list>
+    </div>
+    <!-- bottom menu -->
+    <iv-bottom-menu [navbarOpen]="navbarOpen" isMobile="false"></iv-bottom-menu>
+  </div>
+  <div [ngClass]="{'hidden': !showSubmenu}" class="sub-nav" fxLayout="row">
+    <div fxFlexFill>
+      <mat-list role="list">
+        <mat-list-item *ngFor="let menu of subMenus" role="listitem" (click)="routeTo(menu)">{{ menu?.label }}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

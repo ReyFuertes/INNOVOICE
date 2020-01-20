@@ -1,0 +1,48 @@
+@import "src/styles/global";
+.mat-card {
+  .header {
+    > div {
+      &:nth-child(2) {
+        color: $color-gray-1;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+  .body {
+    > div {
+      width: 100%;
+      color: $color-primary;
+      font-weight: 600;
+      margin: 5px 0;
+      span {
+        &:nth-child(1) {
+          font-size: 22px;
+          margin-right: 5px;
+        }
+        &:nth-child(2) {
+          font-size: 14px;
+        }
+      }
+      &:nth-child(3) {
+        iv-pill {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .status {
+      > div {
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        width: 100%;
+        &.info {
+          color: $color-info;
+        }
+        &.busy {
+          color: $color-danger;
+        }
+      }
+    }
+  }
+}

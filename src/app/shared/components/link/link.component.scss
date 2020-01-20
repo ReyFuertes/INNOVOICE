@@ -1,0 +1,12 @@
+@import "src/styles/global";
+
+div {
+  padding-bottom: 4px;
+  border-bottom: thin $color-primary solid;
+  a {
+    text-transform: inherit;
+    color: $color-primary;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+}

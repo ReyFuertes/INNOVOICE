@@ -1,0 +1,37 @@
+<iv-top-nav-actions [crumbs]="GetCrumbs()" [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="iv-ext__container" fxLayout="column" fxLayoutAlign="start start">
+  <mat-card fxLayout="column" fxFlexFill fxLayoutGap="20px">
+    <div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="start start">
+        <iv-search (keywordEmitter)="onSearch($event)" type="large"></iv-search>
+      </div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="end end">
+        <iv-button-toggle (toggleChange)="onToggle($event)"></iv-button-toggle>
+      </div>
+    </div>
+    <div *ngIf="(items$ | async)" class="content" [ngSwitch]="tableView">
+      <ng-container *ngSwitchCase="'list'">
+        <div class="iv-list">
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <h5>Default Group</h5>
+            <span class="iv-badge">{{ (items$ | async).length}}</span>
+          </div>
+          <div class="iv-list" fxLayout="column" fxLayoutGap="5px">
+            <iv-list-extension *ngFor="let item of (items$ | async)" [item]="item"></iv-list-extension>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'card'">
+        <div class="iv-list" fxLayout="column" fxLayoutGap="10px">
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <h5>Default Group</h5>
+            <span class="iv-badge">{{ (items$ | async).length}}</span>
+          </div>
+          <div class="iv-list" fxLayout="row wrap" fxLayoutGap="30px">
+            <iv-card-extension *ngFor="let item of (items$ | async)" [item]="item"></iv-card-extension>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+</div>

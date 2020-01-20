@@ -1,0 +1,35 @@
+<mat-expansion-panel [formGroup]="form" #generalPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title><span>General</span></mat-panel-title>
+    <span *ngIf="!generalPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="generalPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="30" [form]="form" [controlName]="'mac_address'" placeholder="Type your mac address here"
+              label="ivr name">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'device_label'" placeholder="Type your label here"
+              label="label">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'description'" placeholder="Type your description here"
+              label="Description">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'vendor'" placeholder="Type your vendor here" label="vendor">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'model'" placeholder="Type your model here" label="model">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'firmware'" placeholder="Type your formware version here"
+              label="firmware version">
+    </iv-input>
+    <iv-select fxFlex="30" label="template" placeholder="select your option"></iv-select>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'username'" placeholder="Type your username here"
+              label="username">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'password'" placeholder="Type your password here"
+              label="password">
+    </iv-input>
+  </div>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <iv-toggle [toggle]="form.get('enabled').value"></iv-toggle>
+  </div>
+</mat-expansion-panel>

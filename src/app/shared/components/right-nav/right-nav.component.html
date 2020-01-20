@@ -1,0 +1,13 @@
+<div class="right-nav" fxLayout="column" fxLayoutAlign="start center">
+  <div><span class="icon-cross-circle" (click)="toggleEmitter.emit(false)"></span></div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <span class="icon-arrow-left"></span>
+    <h5>Back</h5>
+  </div>
+  <div>
+    <h4>Features</h4>
+  </div>
+  <mat-list role="list">
+    <mat-list-item *ngFor="let menu of menus" role="listitem">{{ menu.label }}</mat-list-item>
+  </mat-list>
+</div>

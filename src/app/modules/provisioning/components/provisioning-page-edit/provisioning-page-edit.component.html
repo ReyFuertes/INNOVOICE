@@ -1,0 +1,20 @@
+<iv-top-nav-actions [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="column" class="provisioning-e-p__container">
+  <div>
+    <div fxFlex="50" fxLayoutAlign="start center">On John's Desk</div>
+    <div fxFlex="50" fxLayoutAlign="end center">
+      <iv-button type="transparent" text="cancel"></iv-button>
+      <iv-button text="save" (click)="onSubmit()" type="primary"></iv-button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <form fxLayout="column" novalidate [formGroup]="form" fxLayoutGap="20px">
+      <iv-provisioning-general [form]="form" ></iv-provisioning-general>
+      <iv-provisioning-lines></iv-provisioning-lines>
+      <iv-provisioning-profile></iv-provisioning-profile>
+      <iv-provisioning-keys></iv-provisioning-keys>
+      <iv-provisioning-settings></iv-provisioning-settings>
+      <iv-footer-actions></iv-footer-actions>
+    </form>
+  </div>
+</div>

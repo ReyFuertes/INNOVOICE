@@ -1,0 +1,11 @@
+<mat-expansion-panel #routingPnl hideToggle="true" expanded="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title> <span>Routing</span> </mat-panel-title>
+    <span *ngIf="!routingPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="routingPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-select label="ringback" placeholder="select your option"></iv-select>
+    <iv-select label="backup destination" placeholder="select option"></iv-select>
+  </div>
+</mat-expansion-panel>

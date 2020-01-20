@@ -1,0 +1,8 @@
+<mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+               [ngClass]="{'submenu': menu?.subMenu}" [routerLink]="menu?.route"
+               [fxLayoutAlign]="toggle ? 'center center' : 'center center'" *ngIf="menu" role="listitem">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <span class="{{ menu.icon }} icon"></span>
+    <a href="javascript:void(0)" *ngIf="!toggle" class="iv-uc"> {{ menu.label }}</a>
+  </div>
+</mat-list-item>

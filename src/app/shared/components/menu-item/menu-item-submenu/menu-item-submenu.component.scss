@@ -1,0 +1,35 @@
+@import 'src/styles/global';
+.icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+.iv-uc {
+  width: 150px;
+}
+.iv-text {
+  text-transform: uppercase;
+  color: $color-black;
+
+  span.primary {
+    color: $color-primary;
+  }
+}
+::ng-deep {
+  .mat-menu-panel.active {
+    margin-left: 75px !important;
+  }
+  button.mat-menu-item {
+    outline: none !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 35px;
+    height: 35px;
+  }
+  .mat-menu-item-highlighted:not([disabled]),
+  .mat-menu-item.cdk-keyboard-focused:not([disabled]),
+  .mat-menu-item.cdk-program-focused:not([disabled]),
+  .mat-menu-item:hover:not([disabled]) {
+    color: $color-primary !important;
+    background-color: transparent !important;
+  }
+}

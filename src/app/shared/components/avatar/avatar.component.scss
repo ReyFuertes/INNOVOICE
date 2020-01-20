@@ -1,0 +1,7 @@
+@import 'src/styles/global';
+:host {
+  width: 100%;
+}
+.iv-avatar {
+  @include avatar;
+}

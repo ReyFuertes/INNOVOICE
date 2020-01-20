@@ -1,0 +1,17 @@
+@import 'src/styles/global';
+
+.iv-topnav {
+  width: 100vw;
+  height: 70px;
+  background-color: $color-white;
+
+  .title {
+    font-size: 24px;
+    color: $color-black-1;
+  }
+
+  .icon-menu {
+    font-size: 40px;
+    color: $color-primary;
+  }
+}

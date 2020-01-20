@@ -1,0 +1,38 @@
+<mat-expansion-panel #deliveryPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title> <span>Delivery</span> </mat-panel-title>
+    <span *ngIf="!deliveryPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="deliveryPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-select fxFlex="32" label="ringback" placeholder="select your option"></iv-select>
+    <iv-select fxFlex="32" label="backup destination" placeholder="select option"></iv-select>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="32" [form]="form" [controlName]="'escalation_email_1'" placeholder="Type your email here"
+              label="Escalation Email 1">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'escalation_hours_1'" placeholder="Type the amount here"
+              label="Amount of Time">
+    </iv-input>
+    <iv-select fxFlex="32" label="Time Period" placeholder="select option"></iv-select>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="32" [form]="form" [controlName]="'escalation_email_2'" placeholder="Type your email here"
+              label="Escalation Email 2">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'escalation_hours_2'" placeholder="Type the amount here"
+              label="Amount of Time">
+    </iv-input>
+    <iv-select fxFlex="32" label="Time Period" placeholder="select option"></iv-select>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="32" [form]="form" [controlName]="'escalation_email_3'" placeholder="Type your email here"
+              label="Escalation Email 3">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'escalation_hours_3'" placeholder="Type the amount here"
+              label="Amount of Time">
+    </iv-input>
+    <iv-select fxFlex="32" label="Time Period" placeholder="select option"></iv-select>
+  </div>
+</mat-expansion-panel>

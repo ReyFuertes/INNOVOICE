@@ -1,0 +1,30 @@
+<iv-top-nav-actions [crumbs]="GetCrumbs()" [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="iv-user__container" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+  <mat-card fxLayout="column" fxFlexFill fxLayoutGap="20px">
+    <div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="start start">
+        <iv-search (keywordEmitter)="onSearch($event)" type="large"></iv-search>
+      </div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="end end">
+        <iv-button-toggle (toggleChange)="onToggle($event)"></iv-button-toggle>
+      </div>
+    </div>
+    <div class="content" [ngSwitch]="tableView">
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <h5>Users</h5>
+        <span class="iv-badge">4</span>
+      </div>
+      <ng-container *ngSwitchCase="'card'">
+        <div class="iv-list" fxLayout="row wrap" fxLayoutGap="30px">
+          <iv-user-card *ngFor="let item of (items$ | async)" [item]="item"></iv-user-card>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'list'">
+        <div class="iv-list" fxLayout="column" fxLayoutGap="5px">
+          <iv-user-list *ngFor="let item of (items$ | async)" [item]="item">
+          </iv-user-list>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+</div>

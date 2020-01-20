@@ -1,0 +1,15 @@
+@import "src/styles/global";
+.body {
+  > div {
+    width: 100%;
+  }
+}
+.iv-list {
+  > mat-checkbox {
+    padding-left: 10px;
+  }
+  .icon-trash2 {
+    color: $color-primary;
+    font-size: 16px;
+  }
+}

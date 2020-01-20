@@ -1,0 +1,23 @@
+<div fxLayout="row wrap" fxLayoutGap="30px">
+  <mat-card class="iv-card small" [ngClass]="type">
+    <div fxLayout="row">
+      <div fxFlex class="title">{{item?.description}}</div>
+      <div fxFlex="10" fxLayoutAlign="end center">
+        <img [src]="assetSvgPath + 'more-options-primary.svg'" />
+      </div>
+    </div>
+    <div class="body" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <ng-container [ngSwitch]="status">
+        <span *ngSwitchCase="statuses.play" class="icon-play-circle icon"></span>
+        <span *ngSwitchCase="statuses.pause" class="icon-pause-circle icon"></span>
+        <span *ngSwitchCase="statuses.stop" class="icon-stop-circle icon"></span>
+      </ng-container>
+    </div>
+    <div class="footer" fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+      <div fxFlex>
+        <iv-pill text="john@mycompany.co.uk"></iv-pill>
+      </div>
+      <span fxFlex="10" fxLayoutAlign="end center" (click)="onEdit(item?.id)" class="icon icon-pencil"></span>
+    </div>
+  </mat-card>
+</div>

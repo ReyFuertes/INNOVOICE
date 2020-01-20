@@ -1,0 +1,12 @@
+@import "src/styles/global";
+:host ::ng-deep {
+  .mat-dialog-content {
+    border-top: thin $color-gray-3 solid;
+    padding: 30px 20px 0 20px;
+    border-bottom: thin $color-gray-3 solid;;
+    margin-bottom: 0 !important;
+  }
+  .mat-dialog-actions {
+    min-height: 80px;
+  }
+}

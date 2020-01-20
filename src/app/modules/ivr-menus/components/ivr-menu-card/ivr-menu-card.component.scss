@@ -1,0 +1,23 @@
+@import "src/styles/global";
+
+:host {
+  width: 235px;
+  height: 232px;
+}
+mat-card {
+  > div {
+    div {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &.iv-card.small .body {
+    div:nth-child(2) {
+      height: 150px !important;
+    }
+  }
+  .icon-pencil {
+    cursor: pointer;
+  }
+}

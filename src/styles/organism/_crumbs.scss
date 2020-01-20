@@ -1,0 +1,20 @@
+iv-top-nav-actions {
+  display: flex;
+  background-color: transparent;
+  color: $color-gray;
+  height: 50px;
+  align-items: center;
+  align-content: center;
+  height: 73px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: thin $color-gray-3 solid;
+  > div {
+    &:first-child {
+      width: 100%;
+    }
+    &:nth-child(2) {
+      width: 28%;
+    }
+  }
+}

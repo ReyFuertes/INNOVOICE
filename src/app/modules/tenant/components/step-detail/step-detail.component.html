@@ -1,0 +1,14 @@
+<form novalidate [formGroup]="form">
+  <iv-input [form]="form" [controlName]="'companyName'" label="company name" placeholder="Enter Here"></iv-input>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <iv-input [form]="form" [controlName]="'contactName'" fxFlex="50" label="contact name" placeholder="Enter Here">
+    </iv-input>
+    <iv-input [form]="form" [controlName]="'contactEmail'" fxFlex="50" label="contact email" placeholder="Enter Here">
+    </iv-input>
+  </div>
+  <iv-input [form]="form" [controlName]="'companyAddress'" label="company address" placeholder="Enter Here"></iv-input>
+  <iv-input [form]="form" [controlName]="'companyPhoneNumber'" label="company phone number" placeholder="Enter Here">
+  </iv-input>
+  <iv-input [form]="form" [controlName]="'managementDomain'" label="management domain" placeholder="Enter Here">
+  </iv-input>
+</form>

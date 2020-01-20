@@ -1,0 +1,5 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <span [ngClass]="{'disabled': !toggle, 'enabled': toggle }">Disabled</span>
+  <mat-slide-toggle disableRipple [checked]="!toggle" (change)="onToggleChange()"></mat-slide-toggle>
+  <span [ngClass]="{'enabled': !toggle, 'disabled': toggle}">Enable</span>
+</div>

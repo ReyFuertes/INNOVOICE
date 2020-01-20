@@ -1,0 +1,35 @@
+<mat-expansion-panel #provkeysPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title><span>Keys</span></mat-panel-title>
+    <span *ngIf="!provkeysPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="provkeysPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div class="content" fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="row" fxLayoutAlign="start center" *ngFor="let i of [0, 1, 2]">
+      <div fxFlex="45" fxLayoutGap="15px">
+        <div fxFlex="45" fxLayoutGap="10px">
+          <iv-select label="category" placeholder="select your option" fxFlex="80"></iv-select>
+          <iv-select label="key" placeholder="1" [minWidth]="'40px'" fxFlex="20"></iv-select>
+        </div>
+        <div fxFlex="45" fxLayoutGap="10px">
+          <iv-select label="type" placeholder="select your option" fxFlex="80"></iv-select>
+          <iv-select label="line" placeholder="1" [minWidth]="'40px'" fxFlex="20"></iv-select>
+        </div>
+      </div>
+      <div fxFlex>
+        <div fxFlex fxLayoutGap="15px">
+          <iv-input fxFlex="40" [form]="form" [controlName]="'value'" placeholder="Type value" label="value">
+          </iv-input>
+          <iv-input fxFlex="20" [form]="form" [controlName]="'value'" placeholder="Type value" label="extension">
+          </iv-input>
+          <iv-input fxFlex="40" [form]="form" [controlName]="'value'" placeholder="Type value" label="label">
+          </iv-input>
+        </div>
+      </div>
+      <div fxFlex="5" class="actions" fxLayoutGap="10px">
+        <span class="icon-trash2"></span>
+        <span class="icon-plus-circle"></span>
+      </div>
+    </div>
+  </div>
+</mat-expansion-panel>

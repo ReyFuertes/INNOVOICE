@@ -1,0 +1,6 @@
+<div fxLayout="row" class="iv-pill" [ngClass]="type" [ngStyle]="{width: width}">
+  <mat-chip fxLayoutGap="5px" fxLayoutAlign="start center" [ngClass]="{'bold': isBold}">
+    <span *ngIf="icon" fxFlex="15" class="icon" [ngClass]="icon"></span>
+    <span fxFlex>{{ text }}</span>
+  </mat-chip>
+</div>

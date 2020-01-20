@@ -1,0 +1,25 @@
+<mat-expansion-panel #greetingPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header (click)="expandPanel(greetingPnl)">
+    <mat-panel-title>
+      <span>Greetings</span>
+    </mat-panel-title>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <div (click)="showUploadDialog(greetingPnl)" class="upload" fxLayoutGap="10px">
+        <span class="icon-upload2"></span>
+        <span>Upload new</span>
+      </div>
+      <span *ngIf="!greetingPnl.expanded" class="icon-chevron-down-circle"></span>
+      <span *ngIf="greetingPnl.expanded" class="icon-chevron-up-circle"></span>
+    </div>
+  </mat-expansion-panel-header>
+  <div *ngFor="let i of [0, 1, 2, 3, 4]" fxLayout="row" class="iv-list-item" fxLayoutAlign="start center"
+       [ngClass]="{'disabled': isDisabled}" fxLayoutGap="20px">
+    <div #name>greetingone</div>
+    <span class="icon-play-circle"></span>
+    <span>01:12</span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+      <span fxLayoutAlign="end center" (click)="onDelete(name.innerText)" class="icon icon-trash2"></span>
+      <span fxLayoutAlign="end center" class="icon icon-pencil"></span>
+    </div>
+  </div>
+</mat-expansion-panel>

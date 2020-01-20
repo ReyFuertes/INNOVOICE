@@ -1,0 +1,19 @@
+<iv-top-nav-actions [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="column" class="ext-e-p__container">
+  <div>
+    <div fxFlex="50" fxLayoutAlign="start center">John Simmons</div>
+    <div fxFlex="50" fxLayoutAlign="end center">
+      <iv-button (click)="back()" type="transparent" text="cancel"></iv-button>
+      <iv-button text="save" (click)="onSubmit()" type="primary"></iv-button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <form fxLayout="column" novalidate [formGroup]="form" fxLayoutGap="20px">
+      <iv-extension-general [form]="form"></iv-extension-general>
+      <iv-extension-identity [form]="form"></iv-extension-identity>
+      <iv-extension-preferences [form]="form"></iv-extension-preferences>
+      <iv-call-forwarding></iv-call-forwarding>
+      <iv-footer-actions></iv-footer-actions>
+    </form>
+  </div>
+</div>

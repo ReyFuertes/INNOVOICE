@@ -1,0 +1,31 @@
+@import 'src/styles/global';
+
+label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+:host ::ng-deep {
+  .mat-form-field-label {
+    top: 45px;
+    font-size: 16px;
+    left: 0;
+  }
+
+  .mat-form-field-infix {
+    width: 480px;
+  }
+
+  textarea.mat-input-element {
+    height: 180px;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: $color-primary !important;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: $color-primary !important;
+  }
+}

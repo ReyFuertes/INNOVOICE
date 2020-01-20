@@ -1,0 +1,10 @@
+@mixin iv-content-container {
+  padding: 30px 30px 80px 30px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  mat-card {
+    display: inline-table !important;
+    min-height: calc(100vh - 130px) !important;
+    height: calc(100vh - 135px) !important;
+  }
+}

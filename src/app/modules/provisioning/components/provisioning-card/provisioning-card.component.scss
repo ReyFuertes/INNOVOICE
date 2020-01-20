@@ -1,0 +1,42 @@
+@import "src/styles/global";
+mat-card {
+  padding: 0 !important;
+  > div {
+    padding: 15px !important;
+  }
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .icon-pencil {
+    cursor: pointer;
+  }
+}
+.body {
+  width: 235px;
+  height: 119px;
+  background-image: linear-gradient(to bottom, rgba(0, 95, 169, 0) -78%, var(--secondary));
+  background-color: $color-gray-1;
+  > div {
+    &:first-child {
+      width: 100%;
+      height: 55px;
+      font-size: 14px;
+    }
+    &::nth-child(2) {
+      font-weight: 400;
+    }
+  }
+}
+.footer {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-gray;
+  > div {
+    width: 100%;
+    &:nth-child(2) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}

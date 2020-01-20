@@ -1,0 +1,4 @@
+@import 'src/styles/global';
+.distributor__container {
+  @include iv-content-container;
+}

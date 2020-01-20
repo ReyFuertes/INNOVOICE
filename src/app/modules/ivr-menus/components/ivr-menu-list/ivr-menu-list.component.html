@@ -1,0 +1,16 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row" class="iv-list-item ivr-menu__list" fxLayoutAlign="start center"
+       [ngClass]="type">
+    <div class="name">{{ item?.description }}</div>
+    <div fxFlex>
+      <div fxFlex fxFlexFill fxLayout="row wrap" fxLayoutGap="18px">
+        <button *ngFor="let num of item?.nums" class="btn-num" [ngClass]="{active: num?.active}" mat-flat-button
+                color="primary">{{num?.text}}</button>
+      </div>
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="15px">
+      <span fxFlex="20" fxLayoutAlign="end center" (click)="onEdit(item?.id)" class="icon icon-pencil"></span>
+      <img class="more-options" [src]="assetSvgPath + 'more-options-primary.svg'" />
+    </div>
+  </div>
+</div>

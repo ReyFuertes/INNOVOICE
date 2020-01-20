@@ -1,0 +1,10 @@
+@import "src/styles/global";
+mat-card {
+  .body {
+    height: 125px;
+    span {
+      color: $color-gray;
+      font-size: 12px;
+    }
+  } 
+}

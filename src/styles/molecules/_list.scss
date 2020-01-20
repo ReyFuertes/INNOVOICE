@@ -1,0 +1,60 @@
+.iv-list {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: 500;
+  }
+  > div {
+    margin-bottom: 10px;
+  }
+  .more-options {
+    margin: 0 10px;
+  }
+}
+.iv-list-item {
+  border: thin $color-gray-3 solid;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06);
+  height: 50px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: 0.1s ease-in;
+
+  &:not(.disabled):hover {
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  &.default {
+    color: $color-black-1;
+    border: thin $color-gray-3 solid;
+    .title {
+      color: $color-secondary;
+    }
+    .contact-number {
+      color: $color-primary;
+      width: 100%;
+    }
+    .footer {
+      .icon {
+        color: $color-primary;
+      }
+    }
+  }
+  &.success {
+    background-color: $color-success;
+    color: $color-white;
+  }
+  &.info {
+    background-color: $color-info;
+    color: $color-white;
+  }
+  &.purple {
+    background-color: $color-purple;
+    color: $color-white;
+  }
+}

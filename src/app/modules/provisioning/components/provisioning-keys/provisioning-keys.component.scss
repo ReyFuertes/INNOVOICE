@@ -1,0 +1,9 @@
+@import "src/styles/global";
+.content {
+  .actions {
+    span {
+      color: $color-primary;
+      font-size: 18px;
+    }
+  }
+}

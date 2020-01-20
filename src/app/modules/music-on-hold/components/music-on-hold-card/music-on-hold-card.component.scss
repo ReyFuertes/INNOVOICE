@@ -1,0 +1,12 @@
+@import "src/styles/global";
+span.icon-play-circle {
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+  color: $color-green;
+}
+mat-card {
+  &.iv-card.small .body {
+    height: 125px;
+  }
+}

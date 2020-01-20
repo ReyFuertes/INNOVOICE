@@ -1,0 +1,27 @@
+@import 'src/styles/global';
+
+.align-right {
+  text-align: right;
+}
+
+:host ::ng-deep {
+  .mat-cell,
+  .mat-footer-cell {
+    font-size: 16px;
+  }
+
+  .mat-header-cell {
+    color: $color-black;
+    font-weight: 600;
+  }
+
+  .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+  .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: $color-primary;
+  }
+
+  table.mat-table {
+    width: 1084px;
+    box-shadow: none;
+  }
+}

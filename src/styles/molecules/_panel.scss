@@ -1,0 +1,11 @@
+mat-expansion-panel {
+  mat-panel-title {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .icon-chevron-up-circle,
+  .icon-chevron-down-circle {
+    font-size: 22px;
+    color: $color-primary;
+  }
+}

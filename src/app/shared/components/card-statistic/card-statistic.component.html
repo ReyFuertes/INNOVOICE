@@ -1,0 +1,21 @@
+<iv-card class="statistics" [type]="type">
+  <div header>
+    <div fxLayout="row">
+      <div fxFlex="50">{{title}}</div>
+      <div fxFlex="50" fxLayoutAlign="end center" fxLayoutGap="10px">
+        <span>{{day}}</span>
+        <span class="icon-chevron-down-circle"></span>
+      </div>
+    </div>
+  </div>
+  <div content fxlayout="row" fxLayoutAlign="start center">
+    <h1>£319</h1>
+  </div>
+  <div footer>
+    <div fxFlex="50">{{label}}</div>
+    <div fxFlex="50" fxLayoutAlign="end end" fxLayoutGap="10px">
+      <span class="icon-chart-growth"></span>
+      <span class="icon-list"></span>
+    </div>
+  </div>
+</iv-card>

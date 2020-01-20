@@ -1,0 +1,28 @@
+@import "src/styles/global";
+.iv-card {
+  > div {
+    &:first-child {
+      color: $color-secondary;
+    }
+    &:nth-child(2) {
+      color: $color-gray-1;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .body {
+    padding: 10px 0;
+    color: $color-gray-1;
+    font-weight: 500;
+    height: 100px;
+  }
+  .footer {
+    > span {
+      &:first-child {
+        color: $color-green;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+}

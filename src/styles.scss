@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/global";
+@font-face {
+  font-family: "IvWebFont";
+  src: url("./assets/fonts/Linearicons.ttf") format("truetype");
+}
+html,
+body {
+  height: 100%;
+  outline: none;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  margin: 0;
+  height: 100%;
+}
+.iv-uc {
+  text-transform: uppercase;
+}
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: $color-black-1;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+  margin: 0;
+}
+.p-cursor {
+  cursor: pointer;
+}
+form {
+  width: 100%;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: $color-primary;
+}

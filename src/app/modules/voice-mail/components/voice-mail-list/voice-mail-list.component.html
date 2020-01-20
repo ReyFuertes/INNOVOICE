@@ -1,0 +1,12 @@
+<div fxLayout="row" class="iv-list-item voice-mail" fxLayoutAlign="start center" [ngClass]="{'disabled': isDisabled}">
+  <div class="name">{{item?.description}}</div>
+  <div fxFlex="5">201</div>
+  <div fxFlex="12">
+    <iv-pill text="john@mycompany.co.uk"></iv-pill>
+  </div>
+  <div fxFlex fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+    <span fxLayoutAlign="end center" class="icon icon-play-circle"></span>
+    <span fxLayoutAlign="end center" class="icon icon-pencil"></span>
+    <img class="more-options" [src]="assetSvgPath + 'more-options-primary.svg'" />
+  </div>
+</div>

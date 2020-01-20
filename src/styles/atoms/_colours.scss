@@ -1,0 +1,55 @@
+$color-primary: #EDA804;
+$color-secondary: #003170;
+$color-black: #000000;
+$color-black-1: #333;
+$color-white: #ffffff;
+$color-white-1: #f1f1f1; 
+$color-white-2: #f6f6f6; 
+$color-gray: #666666;
+$color-gray-1: #b2b2b2;
+$color-gray-2: #c6c6c6;
+$color-gray-3: #eeeeee;
+$color-gray-4: #ededed;
+$color-gray-5: #e3e3e3;
+$color-green: #3c815e;
+$color-cyan: #007294;
+$color-success: #60d89b;
+$color-purple: #592f79;
+$color-info: #03b7ed;
+$color-danger:#d55c38;
+$color-green: #00c3ac;
+
+$success: #38c55b;
+$danger: #d55c38;
+$danger-darker: #c15333;
+$warning:  #e5901d;
+$info: #c6c6c6;
+$info-darker: #878787;
+
+$grey-90: lighten($color-black, 10%);
+$grey-80: lighten($color-black, 20%);
+$grey-70: lighten($color-black, 30%);
+$grey-60: lighten($color-black, 40%);
+$grey-50: lighten($color-black, 50%);
+$grey-40: lighten($color-black, 60%);
+$grey-30: lighten($color-black, 70%);
+$grey-20: lighten($color-black, 80%);
+$grey-10: lighten($color-black, 90%);
+$grey-05: lighten($color-black, 95%);
+
+.white {
+  color: $color-white;
+}
+
+.white-90 {
+  color: $color-white;
+  opacity: 0.9;
+}
+
+.primary {
+  color: $color-primary;
+}
+
+.grey-60 {
+  color: $grey-60;
+}

@@ -1,0 +1,7 @@
+<div *ngIf="form" class="iv-input" [formGroup]="form">
+  <mat-form-field floatLabel="never">
+    <label>{{ label }}</label>
+    <input matInput [formControlName]="controlName" autocomplete="off" [placeholder]="placeholder" autocomplete="off">
+  </mat-form-field>
+  <span class="info" *ngIf="isLongText">0/250 characters</span>
+</div>

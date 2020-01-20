@@ -1,0 +1,13 @@
+<mat-expansion-panel #dtmfPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title> <span>DTMF Options</span> </mat-panel-title>
+    <span *ngIf="!dtmfPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="dtmfPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <div fxFlex fxFlexFill fxLayout="row wrap" fxLayoutGap="18px">
+      <button *ngFor="let num of nums" class="btn-num" (click)="showConfigDialog()" [ngClass]="{active: num?.active}"
+              mat-flat-button color="primary">{{num?.text}}</button>
+    </div>
+  </div>
+</mat-expansion-panel>

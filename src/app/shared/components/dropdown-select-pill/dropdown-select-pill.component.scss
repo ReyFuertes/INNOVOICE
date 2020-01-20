@@ -1,0 +1,102 @@
+@import "src/styles/global";
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+  transition: opacity 0.2s linear;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dsp__container {
+  height: 40px;
+  border-bottom: thin $color-gray-3 solid;
+  max-width: 285px;
+  padding-bottom: 5px;
+  > div {
+    > div {
+      width: 272px;
+      &:nth-child(2) {
+        position: relative;
+        top: -4px;
+      }
+    }
+  }
+}
+.dsp-sel {
+  position: absolute;
+  width: 280px;
+  background-color: $color-white;
+  z-index: 999;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: margin 225ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-chevron-up,
+.icon-chevron-down {
+  position: relative;
+  right: -7px;
+  cursor: pointer;
+}
+label {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+:host ::ng-deep {
+  .mat-checkbox-layout .mat-checkbox-label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  mat-chip {
+    font-size: 12px;
+    font-weight: 500;
+    span {
+      &:first-child {
+        width: 90%;
+        top: 1px;
+        position: relative;
+      }
+      &:nth-child(2) {
+        width: 10%;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+  .mat-standard-chip {
+    width: 120px;
+    min-height: 25px !important;
+  }
+  .mat-chip.mat-standard-chip {
+    background-color: $color-primary;
+    color: $color-white;
+    text-align: center;
+  }
+  .mat-chip-list {
+    outline: none;
+    width: 100%;
+  }
+  .mat-chip-list-wrapper {
+    height: 35px;
+    overflow-y: auto;
+    margin: 0 !important;
+    min-width: 265px;
+    > span {
+      color: $color-gray-2;
+    }
+  }
+  .multi-line .mat-chip-list-wrapper {
+    height: 70px !important;
+    top: -3px;
+  }
+}

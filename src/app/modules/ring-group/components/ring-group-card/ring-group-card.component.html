@@ -1,0 +1,18 @@
+<div fxLayout="row wrap" fxLayoutGap="30px">
+  <mat-card class="iv-card small" [ngClass]="type" fxLayout="column" fxLayoutGap="10px">
+    <div fxLayout="row" class="header">
+      <div fxFlex class="title">{{item?.name}}</div>
+      <div fxFlex="10" fxLayoutAlign="end center">
+        <img [src]="assetSvgPath + 'more-options-primary.svg'" />
+      </div>
+    </div>
+    <div class="body" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+      <iv-pill icon="icon-users2" text="83 Paticipants"></iv-pill>
+      <span>STRATEGY: ROLLOVER</span>
+    </div>
+    <div class="footer" fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="10px">
+      <span fxFlex="50" fxLayoutAlign="start center" class="icon icon-phone-outgoing"></span>
+      <span fxFlex="50" fxLayoutAlign="end center" class="icon icon-pencil" (click)="onEdit(item?.id)"></span>
+    </div>
+  </mat-card>
+</div>

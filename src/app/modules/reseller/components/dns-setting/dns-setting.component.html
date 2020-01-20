@@ -1,0 +1,30 @@
+<div class="dns-setting" fxLayout="column" fxLayoutGap="20px">
+  <div fxLayout="row">
+    <span fxLayoutAlign="start center" fxFlex="50" class="text">DNS Setting</span>
+    <div fxLayoutAlign="end center" fxFlex="50">
+      <span class="icon-cross-circle icon" (click)="redirectTo()"></span>
+    </div>
+  </div>
+  <div>
+    Sed nec ante ac enim varius laoreet. Quisque blandit tortor vitae nisi ullamcorper, a fermentum quam auctor. Mauris
+    vehicula est id
+    vehicula dictum.
+  </div>
+  <div fxLayout="column" fxLayoutGap="10px">
+    <mat-list *ngFor="let item of items; let last = last">
+      <mat-list-item class="dns-setting__list" fxLayout="column" fxLayoutGap="5px">
+        <div class="left" fxFlex="30" fxLayoutAlign="start center">{{item?.label}}</div>
+        <div class="right" fxFlex fxLayoutAlign="end center">{{item?.value}}</div>
+        <span class="icon" [ngClass]="item?.icon"></span>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </div>
+  <div fxLayout="row" fxLayoutGap="5px">
+    <span>If you need a hand don’t hesitate to</span>
+    <iv-link text="get in touch."></iv-link>
+  </div>
+  <div>
+    <iv-button type="close" (redirect)="redirectTo()" text="close"></iv-button>
+  </div>
+</div>

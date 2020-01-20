@@ -1,0 +1,154 @@
+@import "src/styles/global";
+:host {
+  width: 100%;
+}
+.router-container {
+  width: 100%;
+  transition: all 0.2s ease-in;
+  overflow: hidden;
+}
+iv-right-nav {
+  position: fixed;
+  z-index: 999;
+  right: -100vw;
+  transition: 0.2s ease-in;
+  &.toggle {
+    right: 0px;
+    opacity: 1;
+  }
+}
+.iv-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: flex !important;
+}
+.app-content {
+  display: flex;
+  max-width: 1500px;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background-color: $color-white-2;
+}
+mat-toolbar {
+  height: 70px;
+  background-color: $color-white;
+}
+.iv-topnav {
+  width: 100vw;
+  background-color: $color-white;
+  .title {
+    font-size: 24px;
+    color: $color-black-1;
+  }
+  .icon-menu {
+    font-size: 40px;
+    color: $color-primary;
+  }
+}
+.drawer-container {
+  display: none;
+}
+.sidenav-container {
+  width: 11%;
+  transition: 0.1s ease-in;
+}
+:host ::ng-deep {
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    padding: 0;
+  }
+  @media (max-width: 414px) {
+    iv-bottom-menu {
+      width: 100%;
+    }
+    iv-sidenav {
+      display: none !important;
+    }
+    .app-content {
+      display: none !important;
+    }
+    .iv-wrapper {
+      display: none !important;
+    }
+    .drawer-container {
+      display: flex;
+    }
+    .drawer {
+      position: fixed;
+      height: 100vh;
+      min-width: 100%;
+      border-right: 1px solid $color-gray;
+      .iv-left-nav {
+        width: 100%;
+        height: calc(100vh - 200px);
+      }
+      .close {
+        width: 100%;
+        height: 70px;
+        padding: 20px;
+      }
+      .icon-cross-circle {
+        color: $color-primary;
+        height: 22px;
+        width: 22px;
+      }
+      .header {
+        position: absolute;
+        right: 0;
+        justify-content: space-between;
+        .contents {
+          padding: 16px;
+        }
+      }
+      .main {
+        &.header {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 2;
+          border-bottom: 1px solid $color-gray;
+        }
+        &.contents {
+          margin-top: 64px;
+          padding: 16px;
+          height: calc(100vh - 70px);
+        }
+      }
+    }
+    .iv-wrapper {
+      flex-direction: column;
+    }
+    .mat-list-item-content {
+      span {
+        margin-right: 10px;
+
+        &.icon {
+          font-size: 20px;
+        }
+      }
+    }
+    mat-list-item {
+      .title {
+        width: 100%;
+        text-transform: uppercase;
+        height: 25px;
+        line-height: 30px;
+      }
+    }
+    mat-list {
+      width: 100%;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

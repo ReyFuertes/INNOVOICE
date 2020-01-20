@@ -1,0 +1,19 @@
+<div class="content" fxLayout="column" fxLayoutGap="20px" fxFlexFill>
+  <div fxLayout="row">
+    <div fxFlex fxLayoutAlign="start center" fxLayoutGap="10px">
+      <button class="btn-num active" mat-flat-button color="primary">1</button>
+      <span>Configuration option 1</span>
+    </div>
+    <div fxFlex="5" fxLayoutAlign="end center" (click)="dialogRef.close()"><span class="icon-cross"></span></div>
+  </div>
+  <mat-dialog-content fxLayout="column" fxLayoutGap="10px" fxFlex>
+    <iv-select label="Time Period" placeholder="select option"></iv-select>
+    <iv-select label="Time Period" placeholder="select option"></iv-select>
+    <iv-input [form]="form" [controlName]="'description'" placeholder="Type your description here" label="description">
+    </iv-input>
+  </mat-dialog-content>
+  <mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <iv-button type="transparent" (click)="dialogRef.close()" text="cancel"></iv-button>
+    <iv-button text="save" type="primary"></iv-button>
+  </mat-dialog-actions>
+</div>

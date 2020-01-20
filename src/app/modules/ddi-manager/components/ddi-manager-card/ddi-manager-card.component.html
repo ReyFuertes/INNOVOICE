@@ -1,0 +1,25 @@
+<mat-card class="iv-card small" [ngClass]="type">
+  <div fxLayout="row" class="header" fxLayoutGap="25px">
+    <div fxFlex>
+      {{item?.number}}
+    </div>
+    <div fxFlex="10" fxLayoutAlign="end center" class="p-cursor" [matMenuTriggerFor]="menu">
+      <img [src]="assetSvgPath + 'more-options-primary.svg'" />
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Diagnose</button>
+        <button mat-menu-item>Delete</button>
+      </mat-menu>
+    </div>
+  </div>
+  <div class="body" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+    <div>
+      {{ item?.description }}
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="5px">
+      <iv-pill *ngFor="let pill of pillArr" [text]="pill?.text"></iv-pill>
+    </div>
+  </div>
+  <div class="footer" fxLayout="row" fxLayoutAlign="start start">
+    <div fxFlexOffset="90" fxFlex="10" (click)="onEdit(item?.id)" class="icon icon-pencil"></div>
+  </div>
+</mat-card>

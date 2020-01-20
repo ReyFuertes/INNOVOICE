@@ -1,0 +1,12 @@
+@import 'src/styles/global';
+
+::ng-deep {
+  .mat-menu-item:focus {
+    outline: none !important;
+  }
+
+  button.mat-menu-item:hover {
+    background-color: $color-white !important;
+    color: $color-primary !important;
+  }
+}

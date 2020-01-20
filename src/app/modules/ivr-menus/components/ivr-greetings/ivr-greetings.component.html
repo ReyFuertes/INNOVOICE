@@ -1,0 +1,17 @@
+<mat-expansion-panel [formGroup]="form" #greetingsPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title> <span>Greetings</span> </mat-panel-title>
+    <span *ngIf="!greetingsPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="greetingsPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <div fxFlex="32" fxLayout="column">
+      <iv-select label="Initial Prompt" placeholder="select option"></iv-select>
+      <iv-upload></iv-upload>
+    </div>
+    <div fxFlex="32" fxLayout="column">
+      <iv-select label="Initial Prompt" placeholder="select option"></iv-select>
+      <iv-upload></iv-upload>
+    </div>
+  </div>
+</mat-expansion-panel>

@@ -1,0 +1,50 @@
+<iv-top-nav-actions [crumbs]="GetCrumbs()" [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="iv-fm__container" fxLayout="column" fxLayoutAlign="start start">
+  <mat-card fxLayout="column" fxFlexFill fxLayoutGap="20px">
+    <div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="start start">
+        <iv-search type="large"></iv-search>
+      </div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="end end">
+        <iv-button-toggle (toggleChange)="onToggle($event)"></iv-button-toggle>
+      </div>
+    </div>
+    <div fxFlex="column" class="content" [ngSwitch]="tableView">
+      <ng-container *ngSwitchCase="'card'">
+        <div>
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <h5>Sales</h5>
+            <span class="iv-badge">4</span>
+          </div>
+          <div class="iv-list" fxLayout="row wrap" fxLayoutGap="30px">
+            <iv-follow-me-card *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]"
+                               [status]="i === 1 ? 'busy' : i === 2 ? 'divert' : null" title="myCompany"
+                               name="John Simmons"></iv-follow-me-card>
+          </div>
+        </div>
+        <div>
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <h5>Customer Service</h5>
+            <span class="iv-badge">3</span>
+          </div>
+          <div class="iv-list" fxLayout="row wrap" fxLayoutGap="30px">
+            <iv-follow-me-card *ngFor="let i of [0, 1, 2, 3]" [status]="i === 1 ? 'busy' : i === 2 ? 'divert' : null"
+                               title="myCompany" name="John Simmons"></iv-follow-me-card>
+
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'list'">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <h5>Sales</h5>
+          <span class="iv-badge">4</span>
+        </div>
+        <div class="iv-list" fxLayout="column" fxLayoutGap="15px">
+          <iv-follow-me-list *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]" title="MyCompany"
+                             name="John Simmons" [status]="i === 1 ? 'busy' : i === 2 ? 'divert' : null">
+          </iv-follow-me-list>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+</div>

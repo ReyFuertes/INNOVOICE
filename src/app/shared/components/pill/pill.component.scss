@@ -1,0 +1,27 @@
+@import "src/styles/global";
+::ng-deep {
+  mat-chip {
+    position: relative;
+    top: 1px;
+    width: 100%;
+    > div:nth-child(2) {
+      position: relative;
+      top: -1px;
+    }
+    > span{
+      &:nth-child(2) {
+        white-space: nowrap;
+        font-size: 12px;
+      }
+    }
+  }
+  .mat-standard-chip {
+    font-size: 12px;
+    padding: 2px 7px 4px 7px;
+    border-radius: 20px;
+    text-align: center;
+    &.bold {
+      font-weight: 600;
+    }
+  }
+}

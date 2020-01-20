@@ -1,0 +1,38 @@
+@import "src/styles/global";
+
+.dns-setting {
+  width: 575px;
+  margin: 0 auto;
+  > div {
+    &:first-child {
+      height: 80px;
+    }
+    height: 100%;
+    span.icon {
+      color: $color-gray-1;
+      margin-left: 5px;
+      color: $color-primary;
+    }
+    span.icon-cross-circle {
+      font-size: 28px;
+      cursor: pointer;
+    }
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+}
+
+::ng-deep {
+  .mat-list-item-content {
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+  iv-link {
+    max-width: 21%;
+  }
+  .dns-setting__list .mat-list-item-content {
+    padding: 0 !important;
+  }
+}

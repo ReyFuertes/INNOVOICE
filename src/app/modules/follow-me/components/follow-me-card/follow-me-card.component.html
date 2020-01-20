@@ -1,0 +1,27 @@
+<mat-card class="iv-card small" [ngClass]="type">
+  <div class="header" fxLayoutGap="25px">
+    <div fxLayout="row">
+      {{title}}
+    </div>
+    <div>201</div>
+  </div>
+  <div class="body" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+    <div fxLayout="row" fxLayoutAlign="start center" class="checkabled">
+      <span class="icon-checkmark-circle"></span>
+      <span>DND Enabled</span>
+    </div>
+    <div class="status">
+      <ng-container [ngSwitch]="status">
+        <div class="info" *ngSwitchCase="'busy'"><span class="icon-arrow-divert"></span>
+          <span>Busy</span>
+        </div>
+        <div class="busy" *ngSwitchCase="'divert'"> <span class="icon-arrow-divert"></span>
+          <span> Always </span>
+        </div>
+      </ng-container>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="5px">
+      <iv-pill *ngFor="let pill of pillArr" [text]="pill?.text"></iv-pill>
+    </div>
+  </div>
+</mat-card>

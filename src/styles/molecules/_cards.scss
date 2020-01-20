@@ -1,0 +1,135 @@
+mat-card {
+  position: relative;
+  border-radius: 3px;
+  background: $color-white;
+  border: 0;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.22) !important;
+  color: $color-white;
+  text-transform: capitalize;
+  font-size: 14px;
+  width: 100%;
+  padding: 30px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $color-gray;
+    margin: 0;
+    font-weight: 500;
+  }
+  .content {
+    height: calc(100%);
+    margin: 0;
+  }
+  &.statistics {
+    width: 520px;
+    height: 200px;
+    padding: 20px;
+  }
+  &.iv-card {
+    color: $color-black-1;
+    padding: 15px;
+    color: $color-black-1;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    .btn-num {
+      margin-bottom: 10px;
+    }
+    span.icon-play-circle {
+      font-size: 60px;
+      color: $color-green;
+    }
+    span.icon-pause-circle {
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+      color: $color-info;
+    }
+    span.icon-stop-circle {
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+      color: $color-danger;
+    }
+    span.icon-pencil {
+      cursor: pointer;
+      outline: none;
+    }
+    &.medium {
+      width: 235px;
+      height: 232px;
+      .body {
+        height: 170px;
+      }
+      .footer {
+        .icon {
+          color: $color-primary;
+        }
+      }
+    }
+    &.small {
+      width: 235px;
+      height: 193px;
+      .footer {
+        .icon {
+          color: $color-primary;
+        }
+      }
+    }
+    &.large {
+      width: 342px;
+      height: 288px;
+      border-radius: 3px;
+      margin-bottom: 30px;
+      &.np {
+        padding: 0 !important;
+      }
+    }
+  }
+  &.success {
+    background-color: $color-success;
+    color: $color-white;
+    font-size: 16px;
+  }
+  &.info {
+    background-color: $color-info;
+    color: $color-white;
+    font-size: 16px;
+  }
+  &.purple {
+    background-color: $color-purple;
+    color: $color-white;
+    font-size: 16px;
+  }
+  &.iv-card-small {
+    height: 185px;
+  }
+  &.primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  &.secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+  &.success {
+    background-color: $color-success;
+    color: $color-white;
+  }
+  &.default {
+    background-color: $color-white;
+  }
+  &.iv-card-h100 {
+    height: auto;
+  }
+  .mat-card-header-text {
+    margin: 0;
+  }
+  .c-white {
+    color: $color-white;
+  }
+}

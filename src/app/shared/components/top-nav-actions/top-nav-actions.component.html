@@ -1,0 +1,21 @@
+<div class="crumbs" fxLayout="row" fxLayoutAlign="start center">
+  <div *ngIf="action?.backBtnText" (click)="action?.backFn()" fxLayoutGap="10px">
+    <span class="icon-arrow-left"></span>
+    <span>{{ action?.backBtnText }}</span>
+  </div>
+  <div fxFlex>
+    <ol>
+      <li *ngFor="let crumb of crumbs; let last = last; let i = index" class="breadcrumb-item">
+        <a *ngIf="crumb.path && !last" (click)="goTo(crumb.path)" class="active-link">{{crumb.text}}</a>
+        <span *ngIf="i !== 0 && last" class="icon-chevron-right"></span>
+        <span *ngIf="!crumb.path || last" class="current-link">{{ crumb.text}}</span>
+      </li>
+    </ol>
+  </div>
+  <div fxFlex fxLayoutAlign="end center" fxLayoutGap="30px">
+    <!-- import export -->
+    <iv-import-export *ngIf="action?.importFn || action?.exportFn" [action]="action"> </iv-import-export>
+    <!-- action buttons -->
+    <iv-page-action *ngIf="action?.addBtnText" [action]="action"></iv-page-action>
+  </div>
+</div>

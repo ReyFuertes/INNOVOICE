@@ -1,0 +1,37 @@
+<mat-expansion-panel #advancePnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title> <span>Advanced</span> </mat-panel-title>
+    <span *ngIf="!advancePnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="advancePnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="32" [form]="form" [controlName]="'domain_uuid'" placeholder="Type your email here"
+              label="Escalation Email 1">
+    </iv-input>
+    <div fxFlex fxLayout="column">
+      <iv-select fxFlex="32" label="Invalid Entry Prompt" placeholder="select option"></iv-select>
+      <iv-upload></iv-upload>
+    </div>
+    <div fxFlex fxLayout="column">
+      <iv-select fxFlex="32" label="Exit Sound" placeholder="select option"></iv-select>
+      <iv-upload></iv-upload>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="32" [form]="form" [controlName]="'domain_uuid'" placeholder="Type your number here"
+              label="Confirm Attempts">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'domain_uuid'" placeholder="Type your number here"
+              label="Inter-digit Timeout">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'domain_uuid'" placeholder="Type your number here"
+              label="Max Failures">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'domain_uuid'" placeholder="Type your number here"
+              label="Max Timeouts">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'domain_uuid'" placeholder="Type your number here"
+              label="Direct Dial Digit Length">
+    </iv-input>
+  </div>
+</mat-expansion-panel>

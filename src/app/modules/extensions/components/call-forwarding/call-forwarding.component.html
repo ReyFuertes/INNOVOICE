@@ -1,0 +1,9 @@
+<mat-expansion-panel #callForwarding expanded="true" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title><span>Call Forwarding</span></mat-panel-title>
+      <span *ngIf="!callForwarding.expanded" class="icon-chevron-down-circle"></span>
+      <span *ngIf="callForwarding.expanded" class="icon-chevron-up-circle"></span>
+    </mat-expansion-panel-header>
+    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="40px">
+    </div>
+  </mat-expansion-panel>

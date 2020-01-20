@@ -1,0 +1,42 @@
+@import "src/styles/global";
+.iv-text {
+  text-transform: uppercase;
+  color: $color-black;
+  span.primary {
+    color: $color-primary;
+  }
+}
+iv-menu-item {
+  width: 300px;
+}
+.icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+:host ::ng-deep {
+  .mat-list-item-content {
+    width: 100%;
+  }
+  mat-list-item {
+    outline: none;
+    &:hover {
+      color: $color-primary !important;
+      cursor: pointer;
+      a {
+        color: $color-primary !important;
+      }
+    }
+    &.active {
+      color: $color-primary !important;
+      a {
+        color: $color-primary !important;
+      }
+    }
+    &.submenu:not(:hover) {
+      color: $color-black !important;
+      a {
+        color: $color-black !important;
+      }
+    }
+  }
+}

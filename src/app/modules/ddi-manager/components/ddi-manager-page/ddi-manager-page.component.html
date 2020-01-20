@@ -1,0 +1,35 @@
+<iv-top-nav-actions [crumbs]="GetCrumbs()" [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="iv-ddi-mngr__container" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+  <mat-card fxLayout="column" fxFlexFill fxLayoutGap="20px">
+    <div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="start start">
+        <iv-search (keywordEmitter)="onSearch($event)" type="large"></iv-search>
+      </div>
+      <div fxFlex="50" fxLayout="row" fxLayoutAlign="end end">
+        <iv-button-toggle (toggleChange)="onToggle($event)"></iv-button-toggle>
+      </div>
+    </div>
+    <div class="content" [ngSwitch]="tableView">
+      <ng-container *ngSwitchCase="'card'">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <h5>Default</h5>
+          <span class="iv-badge">4</span>
+        </div>
+        <div class="iv-list" fxLayout="row wrap" fxLayoutGap="30px">
+          <iv-ddi-manager-card *ngFor="let item of (items$ | async)" [item]="item" >
+          </iv-ddi-manager-card>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'list'">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <h5>Geographic</h5>
+          <span class="iv-badge">4</span>
+        </div>
+        <div class="iv-list">
+          <iv-ddi-manager-list *ngFor="let item of (items$ | async)" [item]="item"></iv-ddi-manager-list>
+        </div>
+
+      </ng-container>
+    </div>
+  </mat-card>
+</div>

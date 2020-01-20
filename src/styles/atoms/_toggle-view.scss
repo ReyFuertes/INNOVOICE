@@ -1,0 +1,27 @@
+.iv-toggle-view {
+  border: none !important;
+  border-radius: 2px !important;
+  span.icon {
+    font-size: 20px;
+  }
+  .mat-button-toggle-label-content {
+    line-height: 20px !important;
+    color: $color-primary;
+  }
+  .mat-button-toggle-button {
+    height: 40px;
+    outline: none;
+  }
+  .mat-button-toggle-checked {
+    background-color: $color-primary !important;
+    span.icon {
+      color: $color-white !important;
+    }
+  }
+  .mat-button-toggle {
+    border: thin $color-gray-2 solid;
+  }
+  .mat-button-toggle-checked {
+    border: thin $color-primary solid;
+  }
+}

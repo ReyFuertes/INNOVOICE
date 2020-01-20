@@ -1,0 +1,31 @@
+<mat-expansion-panel #destinationPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title><span>Destination</span></mat-panel-title>
+    <span *ngIf="!destinationPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="destinationPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div class="body" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+    <div>
+      <iv-select fxFlex="50" label="ring strategy" placeholder="select your option"></iv-select>
+    </div>
+    <div class="iv-list" fxLayout="column" fxLayoutGap="10px">
+      <mat-checkbox>Select all</mat-checkbox>
+      <div *ngFor="let i of [0, 1, 2]" fxLayout="row" class="iv-list-item ring-group" fxLayoutAlign="start center" fxLayoutGap="5px">
+        <iv-checkbox></iv-checkbox>
+        <div class="name">Customer Services</div>
+        <div fxFlex fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="15px">
+          <span class="icon-trash2"></span>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <iv-button icon="icon-plus-circle" type="primary" text="ADD DESTINATION"></iv-button>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <iv-select fxFlex="50" label="overflow destination" placeholder="select your option"></iv-select>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <iv-checkbox text="Skip Active Users"></iv-checkbox>
+    </div>
+  </div>
+</mat-expansion-panel>

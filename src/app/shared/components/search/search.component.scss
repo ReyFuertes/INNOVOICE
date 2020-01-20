@@ -1,0 +1,29 @@
+@import "src/styles/global";
+
+.search-icon-only {
+  height: 50px;
+  margin-top: 10px;
+
+  span.icon-magnifier {
+    border-radius: 50%;
+    border: thin $color-gray-2 solid;
+    padding: 8px;
+    height: 30px;
+    width: 30px;
+    color: $color-primary;
+    font-size: 14px;
+  }
+}
+
+:host ::ng-deep {
+  .mat-form-field {
+    min-width: 100% !important;
+  }
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: $color-primary;
+  }
+
+  .mat-form-field-underline {
+    display: none;
+  }
+}

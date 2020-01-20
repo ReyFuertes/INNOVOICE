@@ -1,0 +1,10 @@
+@import 'src/styles/global';
+.iv-rg__container {
+  @include iv-content-container;
+}
+.content > div {
+  margin-bottom: 10px;
+  > div {
+    margin-bottom: 10px;
+  }
+}

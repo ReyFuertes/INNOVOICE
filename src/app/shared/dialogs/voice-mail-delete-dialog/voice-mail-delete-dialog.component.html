@@ -1,0 +1,15 @@
+<div class="content" fxLayout="column" fxLayoutGap="20px" fxFlexFill>
+  <div fxLayout="row">
+    <div fxFlex fxLayoutAlign="start center" fxLayoutGap="10px">
+      <span>Delete greeting</span>
+    </div>
+    <div fxFlex="5" fxLayoutAlign="end center" (click)="dialogRef.close()"><span class="icon-cross"></span></div>
+  </div>
+  <mat-dialog-content fxLayout="column" fxLayoutGap="10px" fxFlex>
+    <div>Are you sure you want to delete the greeting <span class="primary">{{data?.item}}</span></div>
+  </mat-dialog-content>
+  <mat-dialog-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+    <iv-button type="transparent" (click)="dialogRef.close()" text="cancel"></iv-button>
+    <iv-button text="delete" type="primary"></iv-button>
+  </mat-dialog-actions>
+</div>

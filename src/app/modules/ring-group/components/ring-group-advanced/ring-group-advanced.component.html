@@ -1,0 +1,15 @@
+<mat-expansion-panel #ringGroupAdvancedPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title><span>Advanced</span></mat-panel-title>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <span *ngIf="!ringGroupAdvancedPnl.expanded" class="icon-chevron-down-circle"></span>
+      <span *ngIf="ringGroupAdvancedPnl.expanded" class="icon-chevron-up-circle"></span>
+    </div>
+  </mat-expansion-panel-header>
+  <div class="content" fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="row" fxLayoutGap="20px">
+      <iv-select fxFlex="50" label="ringback" placeholder="select your option"></iv-select>
+      <iv-select fxFlex="50" label="ringback" placeholder="select your option"></iv-select>
+    </div>
+  </div>
+</mat-expansion-panel>

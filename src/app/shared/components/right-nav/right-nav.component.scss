@@ -1,0 +1,50 @@
+@import 'src/styles/global';
+
+.right-nav {
+  background-color: $color-primary;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+
+  h4 {
+    color: $color-white;
+  }
+
+  h5 {
+    color: $color-white;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  >div {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+
+    &:first-child {
+      height: 20px;
+      text-align: right;
+    }
+
+    &:nth-child(2) {
+      text-align: left;
+    }
+
+    span {
+      font-size: 20px;
+      color: $color-white;
+    }
+  }
+}
+
+:host ::ng-deep {
+  .mat-list-item-content {
+    color: $color-white;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  mat-list {
+    padding: 7px;
+  }
+}

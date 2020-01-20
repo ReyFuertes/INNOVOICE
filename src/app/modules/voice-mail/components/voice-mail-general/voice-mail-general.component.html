@@ -1,0 +1,21 @@
+<mat-expansion-panel #generalPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title><span>General</span></mat-panel-title>
+    <span *ngIf="!generalPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="generalPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="32" [form]="form" [controlName]="'domain_uuid'" placeholder="Type your mailbox number here"
+              label="Mailbox Number">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'voicemail_pin'" placeholder="Type your mailbox pin here"
+              label="Mailbox Pin">
+    </iv-input>
+    <iv-input fxFlex="32" [form]="form" [controlName]="'description'" placeholder="Type your description here"
+              label="Description">
+    </iv-input>
+  </div>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <iv-toggle toggle="true"></iv-toggle>
+  </div>
+</mat-expansion-panel>

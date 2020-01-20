@@ -1,0 +1,19 @@
+<iv-top-nav-actions [action]="GetPageAction()"></iv-top-nav-actions>
+<div class="column" class="rg-e-p__container">
+  <div>
+    <div fxFlex="50" fxLayoutAlign="start center">On John's Desk</div>
+    <div fxFlex="50" fxLayoutAlign="end center">
+      <iv-button type="transparent" text="cancel"></iv-button>
+      <iv-button text="save" (click)="onSubmit()" type="primary"></iv-button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <form fxLayout="column" novalidate [formGroup]="form" fxLayoutGap="20px">
+      <iv-ring-group-general [form]="form"></iv-ring-group-general>
+      <iv-ring-group-destination></iv-ring-group-destination>
+      <iv-ring-group-call-forwarding></iv-ring-group-call-forwarding>
+      <iv-ring-group-advanced></iv-ring-group-advanced>
+      <iv-footer-actions></iv-footer-actions>
+    </form>
+  </div>
+</div>

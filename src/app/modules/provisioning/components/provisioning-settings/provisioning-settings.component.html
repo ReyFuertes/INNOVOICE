@@ -1,0 +1,26 @@
+<mat-expansion-panel #provSettingsPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header (click)="expandPanel(provSettingsPnl)">
+    <mat-panel-title><span>Settings</span></mat-panel-title>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <iv-toggle toggle="true" (click)="isEventDialog = true"></iv-toggle>
+      <span *ngIf="!provSettingsPnl.expanded" class="icon-chevron-down-circle"></span>
+      <span *ngIf="provSettingsPnl.expanded" class="icon-chevron-up-circle"></span>
+    </div>
+  </mat-expansion-panel-header>
+  <div class="content" fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="row" fxLayoutAlign="start center" *ngFor="let i of [0, 1, 2]">
+      <div fxFlex fxLayoutGap="15px">
+        <iv-input fxFlex="40" [form]="form" [controlName]="'value'" placeholder="Type value" label="name">
+        </iv-input>
+        <iv-input fxFlex="20" [form]="form" [controlName]="'value'" placeholder="Type value" label="value">
+        </iv-input>
+        <iv-input fxFlex="40" [form]="form" [controlName]="'value'" placeholder="Type value" label="description">
+        </iv-input>
+      </div>
+      <div fxFlex="5" class="actions" fxLayoutGap="10px">
+        <span class="icon-trash2"></span>
+        <span class="icon-plus-circle"></span>
+      </div>
+    </div>
+  </div>
+</mat-expansion-panel>

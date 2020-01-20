@@ -1,0 +1,32 @@
+@import "src/styles/global";
+
+:host {
+  width: 100%;
+}
+
+.music-on-hold {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06);
+  height: 50px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: 0.1s ease-in;
+  color: $color-black-1;
+
+  .title {
+    color: $color-secondary;
+  }
+
+  .counter {
+    color: $color-gray;
+  }
+  span.icon-play-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: $color-green;
+  }
+}
+
+

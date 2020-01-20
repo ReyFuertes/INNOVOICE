@@ -1,0 +1,25 @@
+<mat-expansion-panel [formGroup]="form" #generalPnl expanded="true" hideToggle="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title><span>General</span></mat-panel-title>
+    <span *ngIf="!generalPnl.expanded" class="icon-chevron-down-circle"></span>
+    <span *ngIf="generalPnl.expanded" class="icon-chevron-up-circle"></span>
+  </mat-expansion-panel-header>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="40px">
+    <iv-input fxFlex="30" [form]="form" [controlName]="'extension'" placeholder="Type your extension here"
+              label="ivr name">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'numberAlias'" placeholder="Type your number alias here"
+              label="number alias">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'password'" placeholder="Type your password here"
+              label="password">
+    </iv-input>
+    <iv-input fxFlex="30" [form]="form" [controlName]="'description'" placeholder="Type your description here"
+              label="Description" isLongText="true">
+    </iv-input>
+    <iv-dropdown-select-pill label="teams" fxFlex="30"></iv-dropdown-select-pill>
+  </div>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <iv-toggle toggle="true"></iv-toggle>
+  </div>
+</mat-expansion-panel>

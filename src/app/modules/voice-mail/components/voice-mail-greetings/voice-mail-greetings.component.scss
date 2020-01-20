@@ -1,0 +1,13 @@
+@import "src/styles/global";
+.icon-play-circle {
+  color: $color-green;
+  font-size: 30px;
+}
+.iv-list-item {
+  > div {
+    color: $color-secondary;
+    &:nth-child(4) {
+      color: $color-primary;
+    }
+  }
+}
